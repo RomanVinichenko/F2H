@@ -1,0 +1,23 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    ul {
+        display: flex;
+
+        li {
+            + li {
+                margin-left: 56px;
+            }
+
+            a {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 22px;
+                text-transform: uppercase;
+                color: #011d47;
+            }
+        }
+    }
+}
