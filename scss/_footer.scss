@@ -1,0 +1,161 @@
+.footer {
+  background-color: #f0f5ff;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+    width: 45%;
+    border-right: 1px solid rgba(#abb9ca, 0.32);
+  }
+
+  .menu-footer {
+    margin: 0 auto;
+
+    ul {
+      li {
+        a {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 22px;
+          text-transform: uppercase;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+    width: 55%;
+  }
+
+  &__box {
+    display: flex;
+    width: 100%;
+    max-width: 473px;
+  }
+
+  &__social {
+    span {
+      margin-bottom: 8px !important;
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 48px;
+          height: 48px;
+          border: 1px solid #abb9ca;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  &__contact {
+    margin-right: 54px;
+
+    span {
+      margin-bottom: 8px !important;
+    }
+
+    a,
+    p {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      text-transform: uppercase;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  span {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #767e8b;
+  }
+
+  &__copy {
+    display: flex;
+    padding: 24px 0;
+    border-top: 1px solid rgba(#abb9ca, 0.32);
+    font-size: 12px;
+    line-height: 20px;
+
+    ul {
+      display: flex;
+      width: 45%;
+
+      li {
+        + li {
+          position: relative;
+          margin-left: 24px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            width: 1px;
+            height: 7px;
+            background-color: rgba(#011d47, 0.25);
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  &__copy-inner {
+    width: 55%;
+  }
+
+  &__copy-box {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 473px;
+
+    p:first-of-type {
+      margin-right: 96px;
+    }
+
+    p {
+      a {
+        display: inline-block;
+        margin-left: 3px;
+      }
+    }
+  }
+}

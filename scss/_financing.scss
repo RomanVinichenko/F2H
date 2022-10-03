@@ -1,0 +1,40 @@
+.financing {
+  padding: 140px 0 120px;
+
+  h2 {
+    margin-bottom: 64px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+    border-top: 1px solid #abb9ca;
+  }
+
+  h5 {
+    @include rv-line;
+
+    margin-bottom: 50px;
+  }
+
+  &__achieve {
+    margin-bottom: 56px;
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      color: #394b65;
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__info {
+    margin-right: 15px;
+    width: 100%;
+    max-width: 384px;
+  }
+}

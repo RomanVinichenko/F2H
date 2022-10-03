@@ -1,39 +1,275 @@
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 28px;
-    letter-spacing: -0.04em;
-    cursor: default;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.04em;
+  color: #011d47;
+  background-color: #fff;
+  cursor: default;
 }
 
 .main {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .container {
-    margin: 0 auto;
-    padding: 0 16px;
-    max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1232px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+h2,
+h3,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: -0.06em;
+}
+
+h2 {
+  font-size: 56px;
+  line-height: 64px;
+}
+
+h3 {
+  font-size: 48px;
+  line-height: 64px;
+}
+
+h5 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.04em;
+}
+
+h6 {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+}
+
+.rv-navigation {
+  position: sticky;
+  top: 20px;
+  margin-right: 15px;
+  height: fit-content;
+
+  span {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #394b65;
+  }
+
+  ul {
+    li {
+      line-height: 20px;
+
+      &::after {
+        display: none;
+      }
+
+      a {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #011d47;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
 
 .rv-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 33px;
-    min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 33px;
+  width: fit-content;
+  min-height: 62px;
+  max-height: 62px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #011d47;
+  transition: all 0.3s;
+
+  &:focus,
+  &:hover,
+  &:active,
+  &:target, {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.rv-ghost {
+  padding: 0 24px;
+  min-height: 70px;
+  max-height: 70px;
+  border: 1px solid #abb9ca;
+  color: #011d47;
+  background-color: transparent;
+
+  &:hover {
+    color: #011d47;
+  }
+}
+
+.preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 399px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 64%;
+    height: 100%;
+    background-color: rgba(#011d47, 0.72);
+  }
+
+  h2 {
+    color: #fff;
+  }
+
+  .container {
+    z-index: 5;
+  }
+}
+
+.qualify {
+  margin-right: 15px;
+  width: 100%;
+  max-width: 384px;
+
+  h6 {
+    margin-bottom: 24px;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #394b65;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  p:not(:first-of-type) {
+    margin-top: 24px;
+  }
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px !important;
+  height: 24px;
+
+  svg {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+
+  p {
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
     text-transform: uppercase;
-    color: #fff;
-    background: #011d47;
+    color: #011d47 !important;
+  }
+}
+
+.other {
+  padding: 120px 0;
+  border-top: 1px solid #abb9ca;
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rv-ghost {
+    margin-top: 10px;
+  }
+
+  h3 {
+    @include rv-line;
+
+    margin-bottom: 82px;
+  }
+
+  ul {
+    display: grid;
+    grid-gap: 0 24px;
+    grid-template-columns: 1fr 1fr;
+
+    li {
+      a {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: 382px;
+        max-height: 382px;
+        object-fit: cover;
+      }
+
+      &:first-child {
+        .blog-item__descr {
+          p {
+            color: #011d47;
+          }
+        }
+      }
+    }
+
+    .blog-item__descr {
+      margin: 24px 0 16px;
+
+      p {
+        + p {
+          &::after {
+            background-color: #767e8b;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,60 @@
+.locations {
+  padding: 120px 0;
+  background-color: #f0f5ff;
+
+  h3 {
+    @include rv-line;
+
+    margin-bottom: 66px;
+  }
+
+  &__group {
+    display: grid;
+    grid-gap: 0 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    h5 {
+      margin-bottom: 8px;
+      max-width: 274px;
+    }
+
+    h6 {
+      margin-bottom: 20px;
+      color: #394b65;
+    }
+
+    p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 24px;
+      color: #767e8b;
+    }
+
+    a {
+      width: fit-content;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      color: #09268d;
+
+      &:not(:first-of-type) {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.contact-box {
+  padding: 120px 0;
+
+  .qualify {
+    span {
+      color: #767e8b;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
