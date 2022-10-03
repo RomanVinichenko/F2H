@@ -1,0 +1,25 @@
+.error {
+  padding: 110px 0 124px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  h5 {
+    margin-bottom: 32px;
+  }
+
+  span {
+    display: block;
+    font-weight: 400;
+    font-size: 280px;
+    line-height: 280px;
+    letter-spacing: -0.08em;
+  }
+
+  &__box {
+    padding-top: 32px;
+    max-width: 225px;
+  }
+}

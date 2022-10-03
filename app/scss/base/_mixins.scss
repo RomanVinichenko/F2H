@@ -1,5 +1,17 @@
 @mixin m($width) {
-    @media only screen and (max-width: $width + "px") {
-        @content;
-    }
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+}
+
+@mixin rv-line {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -26px;
+    width: 120px;
+    height: 1px;
+    background-color: #ff535e;
+  }
 }
