@@ -1,5 +1,4 @@
 let swiper = new Swiper('.different__swiper', {
-
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",

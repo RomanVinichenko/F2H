@@ -98,15 +98,16 @@
         }
       }
 
-      .span-red {
+      span {
         background-color: #ff535e;
       }
 
-      .span-blue {
+      small {
         background-color: #09268d;
       }
 
-      span {
+      span,
+      small {
         display: block;
         margin-top: 56px;
         padding: 40px;

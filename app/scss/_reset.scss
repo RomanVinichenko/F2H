@@ -51,6 +51,7 @@ a {
   &:hover,
   &:active,
   &:target, {
+    outline: none;
     text-decoration: none;
     color: inherit;
   }
