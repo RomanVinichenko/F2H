@@ -1,0 +1,56 @@
+.capital-info {
+  padding: 120px 0;
+  background-color: #f0f5ff;
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.capital-very {
+  span {
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  .nav-tabs {
+    li {
+      a {
+        padding: 0 24px 0 48px;
+        height: 92px;
+      }
+    }
+  }
+
+  .tab-content {
+    .tab-pane {
+      p {
+        margin-bottom: 24px;
+      }
+
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-right: 32px;
+        height: 24px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #09268d;
+
+        &::after {
+          content: url("../images/tab-arrow.svg");
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

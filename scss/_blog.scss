@@ -13,7 +13,7 @@
 
       button {
         position: absolute;
-        left: 16px;
+        left: 12px;
         top: 50%;
         display: flex;
         align-items: center;
@@ -37,7 +37,7 @@
         line-height: 24px;
         letter-spacing: -0.04em;
         color: #011d47;
-        background: #fff;
+        background-color: #fff;
 
         &::placeholder {
           font-weight: 500;
@@ -88,6 +88,107 @@
           }
         }
       }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 88px;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border: 1px solid #abb9ca;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 24px;
+        background-color: transparent;
+        transition: all 0.3s;
+
+        svg {
+          path {
+            transition: all 0.3s;
+          }
+        }
+
+        &:hover {
+          border: 1px solid #011d47;
+          color: #fff;
+          background-color: #011d47;
+
+          svg {
+            path {
+              stroke: #fff;
+            }
+          }
+        }
+      }
+
+      + li {
+        margin-left: 16px;
+      }
+    }
+
+    .pag-active {
+      a {
+        border: 1px solid #011d47;
+        color: #fff;
+        background-color: #011d47;
+      }
+    }
+
+    .pag-inactive {
+      a {
+        svg {
+          path {
+            stroke: #abb9ca;
+          }
+        }
+
+        &:hover {
+          border: 1px solid #abb9ca;
+          background-color: transparent;
+
+          svg {
+            path {
+              stroke: #abb9ca;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.blog__list-second {
+  grid-gap: 48px 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  li {
+    &:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
+.blog-contact {
+  padding: 120px 0;
+
+  h2 {
+    @include rv-line;
+
+    margin: 0 auto 74px;
+    max-width: 696px;
+    text-align: center;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }
