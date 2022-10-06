@@ -1,0 +1,268 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 60%;
+    height: 100%;
+    background-color: rgba(#011d47, 0.72);
+  }
+
+  .container {
+    z-index: 5;
+  }
+
+  &__wrapper {
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 169px 0 81px;
+    min-height: 100vh;
+    max-width: 688px;
+    color: #fff;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .rv-button {
+      border: 1px solid #abb9ca;
+      color: #011d47;
+      background-color: #fff;
+    }
+  }
+}
+
+.rates {
+  margin-bottom: 40px;
+  padding: 22px;
+  max-width: 484px;
+  background-color: #011d47;
+
+  h6 {
+    margin-bottom: 12px;
+    color: #bed4ff;
+  }
+
+  ul {
+    border-top: 1px solid rgba(#767e8b, 0.8);
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 11px;
+
+      &:not(:last-child) {
+        padding-bottom: 11px;
+        border-bottom: 1px solid rgba(#767e8b, 0.8);
+      }
+
+      p,
+      span {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      p {
+        text-transform: uppercase;
+      }
+
+      span {
+        display: block;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.asset {
+  padding: 120px 0 140px;
+
+  h3 {
+    @include rv-line;
+
+    margin-bottom: 26px;
+    max-width: 894px;
+  }
+
+  &__main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 56px;
+  }
+
+  .rv-ghost {
+    min-height: 62px;
+    max-height: 62px;
+    color: #09268d;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      max-width: 384px;
+    }
+
+    ul {
+      display: grid;
+      grid-gap: 40px 60px;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+
+      li {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0 0 0 32px;
+        line-height: 32px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 12px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: #09268d;
+        }
+
+        a {
+          display: block;
+          height: 100%;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          color: #09268d;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  position: relative;
+  z-index: 1;
+  padding: 120px 0;
+  overflow: hidden;
+  background-color: #f0f5ff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    max-width: 71%;
+    background-image: url("../images/map.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    transform: translateY(-50%);
+  }
+
+  .container {
+    z-index: 10;
+  }
+
+  h3 {
+    @include rv-line;
+
+    z-index: 5;
+    margin-bottom: 66px;
+  }
+
+  &__info {
+    z-index: 5;
+    margin-bottom: 40px;
+    max-width: 588px;
+
+    p {
+      color: #394b65;
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
+
+.why {
+  padding: 120px 0;
+
+  h3 {
+    @include rv-line;
+
+    margin: 0 auto 66px;
+    text-align: center;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  p {
+    margin: 0 auto;
+    max-width: 655px;
+    text-align: center;
+    color: #394b65;
+
+    &:not(:last-of-type) {
+      margin-bottom: 28px;
+    }
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    margin: 48px 0 auto;
+
+    li {
+      width: 100%;
+      max-width: 204px;
+      text-align: center;
+
+      + li {
+        margin-left: 39px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      color: #09268d;
+    }
+
+    span {
+      display: block;
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      text-transform: uppercase;
+      color: #09268d;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      color: #394b65;
+    }
+  }
+}
