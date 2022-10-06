@@ -1,0 +1,155 @@
+.focus {
+  padding: 120px 0;
+  background-color: #f0f5ff;
+
+  h3 {
+    @include rv-line;
+
+    margin-bottom: 26px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__img {
+    margin-right: 30px;
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    max-width: 588px;
+
+    p {
+      color: #394b65;
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
+
+.strategy {
+  padding: 120px 0;
+
+  h3 {
+    @include rv-line;
+
+    margin-bottom: 66px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    max-width: 586px;
+
+    p {
+      color: #394b65;
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+    }
+  }
+
+  &__img {
+    img:first-of-type {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.with {
+  padding: 120px 0;
+  background-color: #f0f5ff;
+
+  h3 {
+    @include rv-line;
+
+    margin-bottom: 66px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    p {
+      margin-right: 24px;
+      max-width: 384px;
+      color: #394b65;
+    }
+
+    ul {
+      display: grid;
+      grid-gap: 0 22px;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      img {
+        margin: 0 auto 24px;
+        width: 78px;
+        height: 78px;
+      }
+
+      h6 {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+
+  &__bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__bot-info {
+    max-width: 588px;
+
+    p {
+      color: #394b65;
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
+
+.investments {
+  padding: 120px 0;
+
+  h3 {
+    @include rv-line;
+
+    margin-bottom: 66px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info {
+    max-width: 487px;
+
+    p {
+      color: #394b65;
+
+      &:not(:last-child) {
+        margin-bottom: 28px;
+      }
+    }
+  }
+}
