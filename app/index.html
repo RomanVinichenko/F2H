@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Document</title>
+  <title>Project</title>
   <link rel="icon" type="image/" href="" sizes="">
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/style.min.css"/>
@@ -24,8 +24,12 @@
         <li>
           <a href="#">INVESTORS</a>
         </li>
-        <li>
+        <li class="menu__active">
           <a href="#">RESOURCES</a>
+          <div class="menu__drop">
+              <a href="#">Blog</a>
+              <a href="#">FAQ</a>
+          </div>
         </li>
         <li>
           <a href="#">CAREER</a>
@@ -34,7 +38,12 @@
           <a href="contact.html">Contact</a>
         </li>
       </ul>
-      <a class="rv-button" href="#">Get financing</a>
+      <a class="rv-button" href="#" disabled="false">
+        <div class="rv-button__wrap">
+          <p>Get financing</p>
+          <p>Get financing</p>
+        </div>
+      </a>
     </nav>
   </div>
 </header>
@@ -97,7 +106,12 @@
             </li>
           </ul>
         </div>
-        <a class="rv-button" href="#">Get financing</a>
+        <a class="rv-button rv-secondary" href="#">
+          <div class="rv-button__wrap">
+            <p>Get financing</p>
+            <p>Get financing</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -105,7 +119,12 @@
     <div class="container">
       <div class="asset__main">
         <h3>Loan Products and Asset Classes for Private and Institutional Investors</h3>
-        <a class="rv-button rv-ghost" href="#">all services</a>
+        <a class="rv-button rv-secondary" href="#">
+          <div class="rv-button__wrap">
+            <p>all services</p>
+            <p>all services</p>
+          </div>
+        </a>
       </div>
       <div class="asset__info">
         <p>
@@ -113,28 +132,68 @@
         </p>
         <ul>
           <li>
-            <a href="#">Fixed-rate Loans</a>
+            <a href="#">
+              <div class="asset__box">
+                <p>Fixed-rate Loans</p>
+                <p>Fixed-rate Loans</p>
+              </div>
+            </a>
           </li>
           <li>
-            <a href="#">Construction Loans</a>
+            <a href="#">
+              <div class="asset__box">
+                <p>Construction Loans</p>
+                <p>Construction Loans</p>
+              </div>
+            </a>
           </li>
           <li>
-            <a href="#">Bridge Loans</a>
+            <a href="#">
+              <div class="asset__box">
+                <p>Bridge Loans</p>
+                <p>Bridge Loans</p>
+              </div>
+              </a>
           </li>
           <li>
-            <a href="#">Mezzanine Loans</a>
+            <a href="#">
+              <div class="asset__box">
+                <p>Mezzanine Loans</p>
+                <p>Mezzanine Loans</p>
+              </div>
+              </a>
           </li>
           <li>
-            <a href="#">Land Loans</a>
+            <a href="#">
+              <div class="asset__box">
+                <p>Land Loans</p>
+                <p>Land Loans</p>
+              </div>
+              </a>
           </li>
           <li>
-            <a href="#">Agency Loans</a>
+            <a href="#">
+              <div class="asset__box">
+                <p>Agency Loans</p>
+                <p>Agency Loans</p>
+              </div>
+              </a>
           </li>
           <li>
-            <a href="#">Preferred Equity</a>
+            <a href="#">
+              <div class="asset__box">
+                <p>Preferred Equity</p>
+                <p>Preferred Equity</p>
+              </div>
+              </a>
           </li>
           <li>
-            <a href="#">CMBS</a>
+            <a href="#">
+              <div class="asset__box">
+                <p>CMBS</p>
+                <p>CMBS</p>
+              </div>
+              </a>
           </li>
         </ul>
       </div>
@@ -159,7 +218,12 @@
           Schedule a meeting today to learn about what we can offer for your real estate acquisition or refinance.
         </p>
       </div>
-      <a class="rv-button" href="#">Get financing</a>
+      <a class="rv-button" href="#">
+        <div class="rv-button__wrap">
+          <p>Get financing</p>
+          <p>Get financing</p>
+        </div>
+      </a>
     </div>
   </section>
   <section class="why">
@@ -290,6 +354,21 @@
     </div>
   </div>
 </footer>
+<div class="rv-popup rv-popup--active">
+  <div class="rv-popup__wrapper">
+    <h5>Thank you for your message It has been sent.</h5>
+    <p class="rv-popup__text">We will contact you shortly</p>
+    <a class="rv-button" href="#">
+      <div class="rv-button__wrap">
+        <p>home page</p>
+        <p>home page</p>
+      </div>
+      </a>
+    <button class="rv-popup__close">
+      <img src="images/popup-close.svg" alt="Img">
+    </button>
+  </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/index.min.js"></script>
