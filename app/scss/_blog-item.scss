@@ -1,5 +1,5 @@
 .blog-item {
-  padding: 72px 0 120px;
+  padding: 160px 0 120px;
 
   h2 {
     margin-bottom: 32px;
@@ -44,7 +44,10 @@
   }
 
   &__contact {
+    position: sticky;
+    top: 110px;
     margin-left: 24px;
+    height: fit-content;
 
     h6 {
       margin-bottom: 40px;
