@@ -454,6 +454,7 @@ h6 {
 }
 
 .request__contact {
+  position: relative;
   margin: 0 auto;
   max-width: 588px;
 
@@ -465,6 +466,33 @@ h6 {
 
     label {
       margin: 0;
+    }
+
+    .dad-active-input {
+      .text-label-span {
+        top: 0;
+      }
+    }
+
+    .text-label-span {
+      position: absolute;
+      left: 0;
+      top: 28px;
+      width: 100%;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: -0.04em;
+      color: #767e8b;
+      transition: all 0.3s;
+    }
+
+    .wpcf7-form-control-wrap {
+      position: absolute;
+      left: 0;
+      top: 28px;
+      width: 100%;
+      height: 24px;
     }
   }
 
@@ -494,10 +522,6 @@ h6 {
     height: 69px;
     border-bottom: 1px solid #767e8b;
 
-    &:nth-of-type(odd) {
-      margin-right: 24px;
-    }
-
     input {
       padding: 0;
       width: 100%;
@@ -524,33 +548,6 @@ h6 {
     line-height: 20px;
     letter-spacing: -0.04em;
     color: #394b65;
-  }
-
-  .wpcf7-form-control-wrap {
-    position: absolute;
-    left: 0;
-    top: 28px;
-    width: 100%;
-    height: 24px;
-  }
-
-  .text-label-span {
-    position: absolute;
-    left: 0;
-    top: 28px;
-    width: 100%;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: -0.04em;
-    color: #767e8b;
-    transition: all 0.3s;
-  }
-
-  .dad-active-input {
-    .text-label-span {
-      top: 0;
-    }
   }
 
   .wpcf7-submit {
