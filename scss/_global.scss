@@ -537,19 +537,6 @@ h6 {
     }
   }
 
-  .wpcf7-list-item {
-    display: block;
-    margin: 0;
-  }
-
-  .wpcf7-list-item-label {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: -0.04em;
-    color: #394b65;
-  }
-
   .wpcf7-submit {
     position: relative;
     display: flex;
@@ -609,6 +596,60 @@ h6 {
       p:last-of-type {
         transform: translateY(0);
       }
+    }
+  }
+
+  .wpcf7-form-control .wpcf7-select {
+    margin-bottom: 32px;
+    width: 100%;
+    border: none;
+  }
+
+  .wpcf7-list-item {
+    display: block;
+    margin: 0;
+
+    label {
+      position: relative;
+      margin-bottom: 0;
+      height: auto;
+      border: none;
+
+      input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #011d47;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: all 0.3s;
+
+        &:focus {
+          background-color: #011d47;
+        }
+      }
+    }
+
+    .wpcf7-list-item-label {
+      display: block;
+      padding-left: 32px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: -0.04em;
+      color: #394b65;
+    }
+  }
+}
+
+.button-search__active {
+  svg {
+    path {
+      stroke: #abb9ca;
     }
   }
 }
