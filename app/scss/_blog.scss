@@ -31,6 +31,12 @@
         border: none;
         background-color: transparent;
         transform: translateY(-50%);
+
+        svg {
+          path {
+            transition: all 0.3s;
+          }
+        }
       }
 
       input {
@@ -44,7 +50,8 @@
         line-height: 24px;
         letter-spacing: -0.04em;
         color: #011d47;
-        background-color: #fff;
+        background-color: #f0f5ff;
+        transition: all 0.3s;
 
         &::placeholder {
           font-weight: 500;
@@ -52,6 +59,24 @@
           line-height: 24px;
           letter-spacing: -0.04em;
           color: #767e8b;
+        }
+
+        &:active,
+        &:focus {
+          background-color: #fff;
+        }
+
+        &:disabled {
+          border: 1px solid #abb9ca;
+          background-color: #fff;
+
+          &::placeholder {
+            color: #abb9ca;
+          }
+
+          input {
+            color: #abb9ca;
+          }
         }
       }
     }

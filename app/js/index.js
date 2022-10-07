@@ -7,6 +7,14 @@ if (popClose) {
   });
 }
 
+
+var search = document.getElementById('search');
+var buttonSearch = document.getElementById('button-search');
+
+if (search.disabled) {
+  buttonSearch.classList.add('button-search__active')
+}
+
 let swiper = new Swiper('.different__swiper', {
   navigation: {
     nextEl: ".swiper-button-next",
@@ -20,4 +28,6 @@ let swiper = new Swiper('.different__swiper', {
     630: {}
   }
 });
+
+
 

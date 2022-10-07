@@ -29,6 +29,7 @@
         font-size: 0;
         line-height: 1;
         transform: translateY(-50%);
+        transition: all 0.4s;
       }
     }
 
@@ -36,6 +37,13 @@
       .menu__drop {
         visibility: visible;
         opacity: 1;
+      }
+
+      a {
+        &::before {
+          content: url("../images/drop-arrow-blue.svg");
+          transform: translateY(-50%) rotate(180deg);
+        }
       }
     }
   }
