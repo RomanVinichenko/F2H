@@ -24,6 +24,11 @@
           font-size: 14px;
           line-height: 22px;
           text-transform: uppercase;
+          transition: all 0.3s;
+
+          &:hover {
+            color: #09268d;
+          }
         }
 
         &:not(:last-child) {
@@ -71,6 +76,23 @@
           height: 48px;
           border: 1px solid #abb9ca;
           border-radius: 50%;
+          transition: all 0.3s;
+
+          svg {
+            path {
+              transition: all 0.3s;
+            }
+          }
+
+          &:hover {
+            border: 1px solid #09268d;
+
+            svg {
+              path {
+                fill: #09268d;
+              }
+            }
+          }
         }
       }
     }
@@ -89,6 +111,17 @@
       font-size: 14px;
       line-height: 22px;
       text-transform: uppercase;
+      transition: all 0.3s;
+
+      &:hover {
+        color: #09268d;
+      }
+    }
+
+    p {
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     li {
