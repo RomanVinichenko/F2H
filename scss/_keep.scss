@@ -25,6 +25,7 @@
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
   }
@@ -88,6 +89,10 @@
   }
 
   .tab-content {
+    position: sticky;
+    top: 110px;
+    height: fit-content;
+
     .tab-pane {
       p {
         max-width: 588px;
