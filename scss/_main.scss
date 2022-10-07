@@ -26,18 +26,16 @@
     flex-direction: column;
     justify-content: center;
     padding: 169px 0 81px;
-    min-height: 100vh;
+    height: 100vh;
     max-width: 688px;
     color: #fff;
 
     h2 {
       margin-bottom: 40px;
-    }
 
-    .rv-button {
-      border: 1px solid #abb9ca;
-      color: #011d47;
-      background-color: #fff;
+      @include h(982) {
+        margin-bottom: 20px;
+      }
     }
   }
 }
@@ -64,6 +62,10 @@
       &:not(:last-child) {
         padding-bottom: 11px;
         border-bottom: 1px solid rgba(#767e8b, 0.8);
+
+        @include h(917) {
+          padding-bottom: 7px;
+        }
       }
 
       p,
@@ -81,7 +83,19 @@
         display: block;
         font-weight: 500;
       }
+
+      @include h(917) {
+        padding-top: 7px;
+      }
     }
+  }
+
+  @include h(982) {
+    margin-bottom: 20px;
+  }
+
+  @include h(917) {
+    padding: 14px;
   }
 }
 
@@ -95,6 +109,15 @@
     max-width: 894px;
   }
 
+  &__box {
+    height: 32px;
+    overflow: hidden;
+
+    p {
+      transition: all 0.3s;
+    }
+  }
+
   &__main {
     display: flex;
     align-items: flex-end;
@@ -102,10 +125,12 @@
     margin-bottom: 56px;
   }
 
-  .rv-ghost {
-    min-height: 62px;
-    max-height: 62px;
-    color: #09268d;
+  .rv-secondary {
+    padding: 0 24px;
+
+    p {
+      color: #09268d;
+    }
   }
 
   &__info {
@@ -118,35 +143,45 @@
 
     ul {
       display: grid;
-      grid-gap: 40px 60px;
+      grid-gap: 24px 60px;
       grid-template-columns: 1fr 1fr;
       margin: 0 auto;
 
       li {
-        position: relative;
-        display: block;
-        margin: 0;
-        padding: 0 0 0 32px;
-        line-height: 32px;
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 12px;
-          width: 8px;
-          height: 8px;
-          border-radius: 50%;
-          background-color: #09268d;
-        }
-
         a {
+          position: relative;
           display: block;
+          padding: 0 0 16px 32px;
           height: 100%;
+          border-bottom: 1px solid transparent;
           font-weight: 600;
           font-size: 24px;
           line-height: 32px;
           color: #09268d;
+          transition: all 0.3s;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #09268d;
+          }
+
+          &:hover {
+            border-bottom: 1px solid #09268d;
+
+            p:first-of-type {
+              transform: translateY(-100%);
+            }
+
+            p:last-of-type {
+              transform: translateY(-100%);
+            }
+          }
         }
       }
     }

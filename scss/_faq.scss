@@ -1,0 +1,85 @@
+.faq {
+  padding: 120px 0;
+
+  .panel-title {
+    a {
+      padding: 36px 0 32px;
+      width: 100%;
+      border-top: 1px solid #09268d;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      color: #011d47;
+      transition: all 0.3s;
+    }
+
+    .accordion-toggle {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #09268d;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+      }
+
+      img {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        width: 16px;
+        height: 16px;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+
+        &:first-of-type {
+          visibility: hidden;
+          opacity: 0;
+        }
+      }
+    }
+
+    .collapsed {
+      border-top: 1px solid #abb9ca;
+
+      &::after {
+        border: 1px solid #abb9ca;
+      }
+
+      img:first-of-type {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .panel-group {
+    margin: 0;
+    border-bottom: 1px solid #abb9ca;
+
+    .panel {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+
+      + .panel {
+        margin: 0;
+      }
+    }
+  }
+
+  .panel-body {
+    padding: 0;
+
+    p {
+      margin-bottom: 32px;
+      color: #394b65;
+    }
+  }
+}
