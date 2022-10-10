@@ -126,6 +126,11 @@ h6 {
         font-size: 16px;
         line-height: 20px;
         color: #011d47;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #09268d;
+        }
       }
 
       &:not(:last-child) {
