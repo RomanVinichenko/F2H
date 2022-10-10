@@ -4,6 +4,14 @@
   h1,
   h2 {
     margin-bottom: 64px;
+
+    @include m($xl) {
+      margin-bottom: 44px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   h3 {
@@ -95,6 +103,15 @@
 
         &:not(:last-child) {
           margin-bottom: 28px;
+
+          @include m($xl) {
+            margin-bottom: 26px;
+          }
+        }
+
+        @include m($xl) {
+          font-size: 18px;
+          line-height: 26px;
         }
       }
 
@@ -145,5 +162,25 @@
         }
       }
     }
+
+    @include m($xl) {
+      padding-top: 50px;
+    }
+
+    @include m($lg) {
+      padding-top: 40px;
+    }
+
+    @include m($md  ) {
+      flex-direction: column;
+    }
+  }
+
+  @include m($xl) {
+    padding: 180px 0 80px;
+  }
+
+  @include m($lg) {
+    padding: 120px 0 64px;
   }
 }

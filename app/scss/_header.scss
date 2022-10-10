@@ -11,6 +11,29 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 88px;
+
+  .rv-button {
+    p {
+      @include m($lg) {
+        height: 38px;
+        line-height: 38px;
+      }
+    }
+
+    &__wrap {
+      @include m($lg) {
+        height: 38px;
+      }
+    }
+
+    @include m($lg) {
+      margin-left: auto;
+      padding: 0 16px;
+      min-height: 38px;
+      max-height: 38px;
+    }
+  }
 
   &__active {
     a {
@@ -46,9 +69,96 @@
         }
       }
     }
+
+    @include m($lg) {
+      display: none !important;
+    }
   }
 
-  ul {
+  &__active-mobile {
+    display: none !important;
+    padding: 0 !important;
+
+    .panel-group {
+      margin-bottom: 0;
+      width: 100%;
+    }
+
+    .panel {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .panel-body {
+      padding: 0;
+
+      a {
+        border: none;
+        text-transform: initial;
+        color: #011d47;
+        background-color: #f0f5ff;
+
+        &:hover {
+          border: none;
+        }
+      }
+    }
+
+    .panel-title {
+      font-size: 18px;
+
+      a {
+        position: relative;
+        padding: 24px 15px;
+        color: #09268d;
+        background-color: #f0f5ff;
+        transition: all 0.3s;
+
+        &::before {
+          content: url("../images/drop-arrow-mob.svg");
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          width: 16px;
+          height: 16px;
+          font-size: 0;
+          line-height: 1;
+          transform: translateY(-50%);
+          transition: all 0.4s;
+        }
+
+        &:hover {
+          &::before {
+            content: url("../images/drop-arrow-mob.svg");
+          }
+        }
+      }
+
+      .collapsed {
+        color: #011d47;
+
+        &::before {
+          content: url("../images/drop-arrow-mob-blue.svg");
+          transform: translateY(-50%) rotate(180deg);
+        }
+
+        &:hover {
+          color: #09268d;
+
+          &::before {
+            content: url("../images/drop-arrow-mob.svg");
+          }
+        }
+      }
+    }
+
+    @include m($lg) {
+      display: block !important;
+    }
+  }
+
+  &__list {
     display: flex;
     height: 88px;
 
@@ -59,6 +169,14 @@
 
       + li {
         margin-left: 56px;
+
+        @include m($xl) {
+          margin-left: 48px;
+        }
+
+        @include m($lg) {
+          margin-left: 0;
+        }
       }
 
       a {
@@ -77,8 +195,55 @@
           border-bottom: 4px solid #09268d;
           color: #09268d;
         }
+
+        @include m($lg) {
+          padding: 24px 15px;
+          width: 100%;
+          border-bottom: 1px solid #f0f5ff;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 26px;
+
+          &:hover {
+            border-bottom: 1px solid #f0f5ff;
+          }
+        }
+      }
+
+      &:first-child {
+        a {
+          @include m($lg) {
+            border-top: 1px solid #f0f5ff;
+          }
+        }
       }
     }
+
+    @include m($lg) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 56px;
+      bottom: 0;
+      z-index: 40;
+      flex-direction: column;
+
+      //height: 100vh;
+      padding-top: 32px;
+      width: 100%;
+      height: calc(100vh - 56px);
+      background-color: #fff;
+      transform: translateX(-200%);
+      transition: all 0.3s;
+    }
+  }
+
+  &__list--active {
+    transform: none;
+  }
+
+  @include m($lg) {
+    height: 56px;
   }
 }
 
@@ -123,5 +288,61 @@
     &:hover {
       color: #09268d !important;
     }
+  }
+}
+
+.burger {
+  position: relative;
+  display: none;
+  margin-left: 23px;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-color: transparent;
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.2s;
+
+    &:first-of-type {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  @include m($lg) {
+    display: block;
+  }
+}
+
+.burger--active {
+  img {
+    &:first-of-type {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &:last-of-type {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+  }
+
+  @include m($lg) {
+    width: 51px;
+    height: 56px;
   }
 }
