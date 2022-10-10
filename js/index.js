@@ -7,12 +7,21 @@ if (popClose) {
   });
 }
 
-
 var search = document.getElementById('search');
 var buttonSearch = document.getElementById('button-search');
 
-if (search.disabled) {
+var burger = document.querySelector('.burger');
+var menuList = document.querySelector('.menu__list');
+
+if (search && search.disabled) {
   buttonSearch.classList.add('button-search__active')
+}
+if (burger) {
+  burger.addEventListener('click', function (){
+    burger.classList.toggle('burger--active');
+    menuList.classList.toggle('menu__list--active');
+
+  })
 }
 
 let swiper = new Swiper('.different__swiper', {

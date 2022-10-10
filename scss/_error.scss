@@ -3,11 +3,25 @@
 
   &__wrapper {
     display: flex;
+    align-items: center;
     justify-content: space-around;
+
+    @include m($md) {
+      flex-direction: column;
+    }
   }
 
   h5 {
     margin-bottom: 32px;
+
+    @include m($lg) {
+      font-size: 26px;
+      line-height: 34px;
+    }
+
+    @include m($md) {
+      text-align: center;
+    }
   }
 
   span {
@@ -16,10 +30,38 @@
     font-size: 280px;
     line-height: 280px;
     letter-spacing: -0.08em;
+
+    @include m($xl) {
+      font-size: 230px;
+      line-height: 230px;
+    }
+
+    @include m($lg) {
+      font-size: 180px;
+      line-height: 180px;
+    }
   }
 
   &__box {
-    padding-top: 32px;
     max-width: 225px;
+
+    .rv-button {
+      @include m($md) {
+        margin: 0 auto;
+      }
+    }
+
+    @include m($md) {
+      margin-top: 40px;
+      max-width: 183px;
+    }
+  }
+
+  @include m($lg) {
+    padding: 140px 0 88px;
+  }
+
+  @include m($md) {
+    padding: 136px 0 64px;
   }
 }

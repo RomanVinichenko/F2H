@@ -4,6 +4,19 @@
   h1,
   h2 {
     margin-bottom: 64px;
+
+    @include m($xl) {
+      margin-bottom: 44px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
+  }
+
+  h4,
+  h6 {
+    margin-bottom: 24px;
   }
 
   h3 {
@@ -13,11 +26,20 @@
       margin-top: 56px;
       padding-top: 56px;
       border-top: 1px solid #abb9ca;
+
+      @include m($xl) {
+        margin-top: 32px;
+        padding-top: 32px;
+      }
     }
   }
 
   h5 {
     margin: 56px 0 24px;
+
+    @include m($xl) {
+      margin: 32px 0 16px;
+    }
   }
 
   &__wrapper {
@@ -40,18 +62,35 @@
       a {
         margin-bottom: 28px;
         color: #09268d;
+
+        @include m($xl) {
+          margin-bottom: 24px;
+          font-size: 18px;
+          line-height: 26px;
+        }
       }
 
       ul,
       ol {
         li {
+          color: #394b65;
+
           &:not(:last-child) {
             margin-bottom: 24px;
+          }
+
+          @include m($xl) {
+            font-size: 18px;
+            line-height: 26px;
           }
         }
 
         &:not(:last-child) {
           margin-bottom: 56px;
+
+          @include m($xl) {
+            margin-bottom: 32px;
+          }
         }
       }
 
@@ -60,7 +99,6 @@
 
         li {
           padding-left: 5px;
-          color: #394b65;
 
           &::marker {
             content: counter(list-item) "\a0\a0";
@@ -95,6 +133,15 @@
 
         &:not(:last-child) {
           margin-bottom: 28px;
+
+          @include m($xl) {
+            margin-bottom: 26px;
+          }
+        }
+
+        @include m($xl) {
+          font-size: 18px;
+          line-height: 26px;
         }
       }
 
@@ -145,5 +192,25 @@
         }
       }
     }
+
+    @include m($xl) {
+      padding-top: 50px;
+    }
+
+    @include m($lg) {
+      padding-top: 40px;
+    }
+
+    @include m($md  ) {
+      flex-direction: column;
+    }
+  }
+
+  @include m($xl) {
+    padding: 180px 0 80px;
+  }
+
+  @include m($lg) {
+    padding: 120px 0 64px;
   }
 }

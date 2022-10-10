@@ -14,10 +14,10 @@
 <header class="header">
   <div class="container">
     <nav class="menu">
-      <a class="logo" href="#">
+      <a class="logo" href="index.html">
         <img src="images/logo.svg" alt="Logo">
       </a>
-      <ul>
+      <ul class="menu__list">
         <li>
           <a href="#">LOAN PRODUCTS</a>
         </li>
@@ -30,6 +30,24 @@
               <a href="#">Blog</a>
               <a href="#">FAQ</a>
           </div>
+        </li>
+        <li class="menu__active-mobile">
+          <div class="panel-group" id="accordion1">
+            <div class="panel">
+              <div class="panel-title">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse-mobile">
+                  RESOURCES
+                </a>
+              </div>
+              <div id="collapse-mobile" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <a href="#">Blog</a>
+                  <a href="#">FAQ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </li>
         <li>
           <a href="#">CAREER</a>
@@ -44,216 +62,220 @@
           <p>Get financing</p>
         </div>
       </a>
+      <button class="burger">
+        <img src="images/burger-cl.svg" alt="Img">
+        <img src="images/burger-op.svg" alt="Img">
+      </button>
     </nav>
   </div>
 </header>
 <main class="main">
-  <section class="hero" style="background-image: url('images/hero.jpg')">
-    <div class="container">
-      <div class="hero__wrapper">
-        <h2>Proudly serving real estate investors nationwide</h2>
-        <div class="rates">
-          <h6>Live interest rates</h6>
-          <ul>
-            <li>
-              <p>26-SEP-22</p>
-              <span>theFinancials.com</span>
-            </li>
-            <li>
-              <p>1-MONTH LIBOR</p>
-              <span>2.377%</span>
-            </li>
-            <li>
-              <p>Sofr 30-day avg</p>
-              <span>2.033%</span>
-            </li>
-            <li>
-              <p>Sofr 30 -day term</p>
-              <span>2.301%</span>
-            </li>
-            <li>
-              <p>Prime rate</p>
-              <span>5.50%</span>
-            </li>
-            <li style="padding-left: 60px">
-              <p>u.u. treasury</p>
-              <p>libor swap</p>
-              <p>sofr swap</p>
-            </li>
-            <li>
-              <span>5-year</span>
-              <span>2.377%</span>
-              <span>2.377%</span>
-              <span>2.377%</span>
-            </li>
-            <li>
-              <span>7-year</span>
-              <span>2.033%</span>
-              <span>2.033%</span>
-              <span>2.033%</span>
-            </li>
-            <li>
-              <span>10-year</span>
-              <span>2.301%</span>
-              <span>2.301%</span>
-              <span>2.301%</span>
-            </li>
-            <li>
-              <span>30-year</span>
-              <span>5.50%</span>
-              <span>5.50%</span>
-              <span>5.50%</span>
-            </li>
-          </ul>
-        </div>
-        <a class="rv-button rv-secondary" href="#">
-          <div class="rv-button__wrap">
-            <p>Get financing</p>
-            <p>Get financing</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <section class="asset">
-    <div class="container">
-      <div class="asset__main">
-        <h3>Loan Products and Asset Classes for Private and Institutional Investors</h3>
-        <a class="rv-button rv-secondary" href="#">
-          <div class="rv-button__wrap">
-            <p>all services</p>
-            <p>all services</p>
-          </div>
-        </a>
-      </div>
-      <div class="asset__info">
-        <p>
-          F2H Capital Group partnered with credit unions, banks, insurance companies, agency lenders and CMBS lenders to get the best financing terms for our clients. From commercial fixed term loans to ground up construction loans and everything in between, we can advise our clients on the best capital structure for any of your real estate projects.
-        </p>
-        <ul>
-          <li>
-            <a href="#">
-              <div class="asset__box">
-                <p>Fixed-rate Loans</p>
-                <p>Fixed-rate Loans</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="asset__box">
-                <p>Construction Loans</p>
-                <p>Construction Loans</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="asset__box">
-                <p>Bridge Loans</p>
-                <p>Bridge Loans</p>
-              </div>
-              </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="asset__box">
-                <p>Mezzanine Loans</p>
-                <p>Mezzanine Loans</p>
-              </div>
-              </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="asset__box">
-                <p>Land Loans</p>
-                <p>Land Loans</p>
-              </div>
-              </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="asset__box">
-                <p>Agency Loans</p>
-                <p>Agency Loans</p>
-              </div>
-              </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="asset__box">
-                <p>Preferred Equity</p>
-                <p>Preferred Equity</p>
-              </div>
-              </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="asset__box">
-                <p>CMBS</p>
-                <p>CMBS</p>
-              </div>
-              </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <section class="about">
-    <div class="container">
-      <h3>About</h3>
-      <div class="about__info">
-        <p>
-          F2H Capital Group is your trusted and reliable source of extensive real estate loan products and services.
-          We’ve been in the market for years helping real estate investors grow their investment portfolios across the
-          country.
-        </p>
-        <p>
-          Headquartered in New York, we have handled virtually every type of real estate financing request imaginable.
-          From simple acquisitions to the more complex capital structures that included senior, mezzanine and limited
-          partner equity, our network of partner institutional lenders and private lenders can provide the financing you
-          need.
-        </p>
-        <p>
-          Schedule a meeting today to learn about what we can offer for your real estate acquisition or refinance.
-        </p>
-      </div>
-      <a class="rv-button" href="#">
-        <div class="rv-button__wrap">
-          <p>Get financing</p>
-          <p>Get financing</p>
-        </div>
-      </a>
-    </div>
-  </section>
-  <section class="why">
-    <div class="container">
-      <h3>Why us</h3>
-      <p>
-        We help guide our clients through the ever-changing and challenging landscape of real estate financing.
-      </p>
-      <p>
-        We have the experience and partnerships to get you the best possible deal on your investment.
-      </p>
-      <ul>
-        <li>
-          <span>million</span>
-          <h2>$870</h2>
-          <p>Amount financed</p>
-        </li>
-        <li>
-          <span>volume</span>
-          <h2>413</h2>
-          <p>Transactions completed</p>
-        </li>
-        <li>
-          <span>states</span>
-          <h2>36</h2>
-          <p>Closed transactions</p>
-        </li>
-      </ul>
-    </div>
-  </section>
+<!--  <section class="hero" style="background-image: url('images/hero.jpg')">-->
+<!--    <div class="container">-->
+<!--      <div class="hero__wrapper">-->
+<!--        <h2>Proudly serving real estate investors nationwide</h2>-->
+<!--        <div class="rates">-->
+<!--          <h6>Live interest rates</h6>-->
+<!--          <ul>-->
+<!--            <li>-->
+<!--              <p>26-SEP-22</p>-->
+<!--              <span>theFinancials.com</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <p>1-MONTH LIBOR</p>-->
+<!--              <span>2.377%</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <p>Sofr 30-day avg</p>-->
+<!--              <span>2.033%</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <p>Sofr 30 -day term</p>-->
+<!--              <span>2.301%</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <p>Prime rate</p>-->
+<!--              <span>5.50%</span>-->
+<!--            </li>-->
+<!--            <li style="padding-left: 60px">-->
+<!--              <p>u.u. treasury</p>-->
+<!--              <p>libor swap</p>-->
+<!--              <p>sofr swap</p>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <span>5-year</span>-->
+<!--              <span>2.377%</span>-->
+<!--              <span>2.377%</span>-->
+<!--              <span>2.377%</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <span>7-year</span>-->
+<!--              <span>2.033%</span>-->
+<!--              <span>2.033%</span>-->
+<!--              <span>2.033%</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <span>10-year</span>-->
+<!--              <span>2.301%</span>-->
+<!--              <span>2.301%</span>-->
+<!--              <span>2.301%</span>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <span>30-year</span>-->
+<!--              <span>5.50%</span>-->
+<!--              <span>5.50%</span>-->
+<!--              <span>5.50%</span>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--        <a class="rv-button rv-secondary" href="#">-->
+<!--          <div class="rv-button__wrap">-->
+<!--            <p>Get financing</p>-->
+<!--            <p>Get financing</p>-->
+<!--          </div>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--  <section class="asset">-->
+<!--    <div class="container">-->
+<!--      <div class="asset__main">-->
+<!--        <h3>Loan Products and Asset Classes for Private and Institutional Investors</h3>-->
+<!--        <a class="rv-button rv-secondary" href="#">-->
+<!--          <div class="rv-button__wrap">-->
+<!--            <p>all services</p>-->
+<!--            <p>all services</p>-->
+<!--          </div>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--      <div class="asset__info">-->
+<!--        <p>-->
+<!--          F2H Capital Group partnered with credit unions, banks, insurance companies, agency lenders and CMBS lenders to get the best financing terms for our clients. From commercial fixed term loans to ground up construction loans and everything in between, we can advise our clients on the best capital structure for any of your real estate projects.-->
+<!--        </p>-->
+<!--        <ul>-->
+<!--          <li>-->
+<!--            <a href="#">-->
+<!--              <div class="asset__box">-->
+<!--                <p>Fixed-rate Loans</p>-->
+<!--                <p>Fixed-rate Loans</p>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#">-->
+<!--              <div class="asset__box">-->
+<!--                <p>Construction Loans</p>-->
+<!--                <p>Construction Loans</p>-->
+<!--              </div>-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#">-->
+<!--              <div class="asset__box">-->
+<!--                <p>Bridge Loans</p>-->
+<!--                <p>Bridge Loans</p>-->
+<!--              </div>-->
+<!--              </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#">-->
+<!--              <div class="asset__box">-->
+<!--                <p>Mezzanine Loans</p>-->
+<!--                <p>Mezzanine Loans</p>-->
+<!--              </div>-->
+<!--              </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#">-->
+<!--              <div class="asset__box">-->
+<!--                <p>Land Loans</p>-->
+<!--                <p>Land Loans</p>-->
+<!--              </div>-->
+<!--              </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#">-->
+<!--              <div class="asset__box">-->
+<!--                <p>Agency Loans</p>-->
+<!--                <p>Agency Loans</p>-->
+<!--              </div>-->
+<!--              </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#">-->
+<!--              <div class="asset__box">-->
+<!--                <p>Preferred Equity</p>-->
+<!--                <p>Preferred Equity</p>-->
+<!--              </div>-->
+<!--              </a>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <a href="#">-->
+<!--              <div class="asset__box">-->
+<!--                <p>CMBS</p>-->
+<!--                <p>CMBS</p>-->
+<!--              </div>-->
+<!--              </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--  <section class="about">-->
+<!--    <div class="container">-->
+<!--      <h3>About</h3>-->
+<!--      <div class="about__info">-->
+<!--        <p>-->
+<!--          F2H Capital Group is your trusted and reliable source of extensive real estate loan products and services.-->
+<!--          We’ve been in the market for years helping real estate investors grow their investment portfolios across the-->
+<!--          country.-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          Headquartered in New York, we have handled virtually every type of real estate financing request imaginable.-->
+<!--          From simple acquisitions to the more complex capital structures that included senior, mezzanine and limited-->
+<!--          partner equity, our network of partner institutional lenders and private lenders can provide the financing you-->
+<!--          need.-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          Schedule a meeting today to learn about what we can offer for your real estate acquisition or refinance.-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      <a class="rv-button" href="#">-->
+<!--        <div class="rv-button__wrap">-->
+<!--          <p>Get financing</p>-->
+<!--          <p>Get financing</p>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--  <section class="why">-->
+<!--    <div class="container">-->
+<!--      <h3>Why us</h3>-->
+<!--      <p>-->
+<!--        We help guide our clients through the ever-changing and challenging landscape of real estate financing.-->
+<!--      </p>-->
+<!--      <p>-->
+<!--        We have the experience and partnerships to get you the best possible deal on your investment.-->
+<!--      </p>-->
+<!--      <ul>-->
+<!--        <li>-->
+<!--          <span>million</span>-->
+<!--          <h2>$870</h2>-->
+<!--          <p>Amount financed</p>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <span>volume</span>-->
+<!--          <h2>413</h2>-->
+<!--          <p>Transactions completed</p>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--          <span>states</span>-->
+<!--          <h2>36</h2>-->
+<!--          <p>Closed transactions</p>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </section>-->
 </main>
 <footer class="footer">
   <div class="container">
@@ -354,21 +376,21 @@
     </div>
   </div>
 </footer>
-<div class="rv-popup rv-popup--active">
-  <div class="rv-popup__wrapper">
-    <h5>Thank you for your message It has been sent.</h5>
-    <p class="rv-popup__text">We will contact you shortly</p>
-    <a class="rv-button" href="#">
-      <div class="rv-button__wrap">
-        <p>home page</p>
-        <p>home page</p>
-      </div>
-      </a>
-    <button class="rv-popup__close">
-      <img src="images/popup-close.svg" alt="Img">
-    </button>
-  </div>
-</div>
+<!--<div class="rv-popup rv-popup&#45;&#45;active">-->
+<!--  <div class="rv-popup__wrapper">-->
+<!--    <h5>Thank you for your message It has been sent.</h5>-->
+<!--    <p class="rv-popup__text">We will contact you shortly</p>-->
+<!--    <a class="rv-button" href="#">-->
+<!--      <div class="rv-button__wrap">-->
+<!--        <p>home page</p>-->
+<!--        <p>home page</p>-->
+<!--      </div>-->
+<!--      </a>-->
+<!--    <button class="rv-popup__close">-->
+<!--      <img src="images/popup-close.svg" alt="Img">-->
+<!--    </button>-->
+<!--  </div>-->
+<!--</div>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/index.min.js"></script>

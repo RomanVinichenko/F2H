@@ -48,17 +48,47 @@ h6 {
 h2 {
   font-size: 56px;
   line-height: 64px;
+
+  @include m($xl) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include m($lg) {
+    font-size: 36px;
+    line-height: 48px;
+  }
 }
 
 h3 {
   font-size: 48px;
   line-height: 64px;
+
+  @include m($xl) {
+    font-size: 38px;
+    line-height: 50px;
+  }
+
+  @include m($lg) {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 h5 {
   font-size: 32px;
   line-height: 40px;
   letter-spacing: -0.04em;
+
+  @include m($xl) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @include m($lg) {
+    font-size: 26px;
+    line-height: 34px;
+  }
 }
 
 h6 {
@@ -70,7 +100,8 @@ h6 {
 .rv-navigation {
   position: sticky;
   top: 110px;
-  margin-right: 15px;
+  margin-right: 35px;
+  width: max-content;
   height: fit-content;
 
   span {
@@ -90,16 +121,34 @@ h6 {
       }
 
       a {
+        width: max-content;
         font-weight: 600;
         font-size: 16px;
         line-height: 20px;
         color: #011d47;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #09268d;
+        }
       }
 
       &:not(:last-child) {
         margin-bottom: 20px;
       }
     }
+  }
+
+  @include m($lg) {
+    top: 76px;
+  }
+
+  @include m($md) {
+    position: relative;
+    top: 0;
+    margin-right: 0;
+    margin-bottom: 40px;
+    width: 100%;
   }
 }
 
