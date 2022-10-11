@@ -43,7 +43,7 @@
       color: #09268d !important;
 
       &::before {
-        content: url("../images/drop-arrow.svg");
+        content: url("../images/drop-arrow-blue.svg");
         position: absolute;
         right: 0;
         top: 50%;
@@ -64,7 +64,6 @@
 
       a {
         &::before {
-          content: url("../images/drop-arrow-blue.svg");
           transform: translateY(-50%) rotate(180deg);
         }
       }

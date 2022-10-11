@@ -3,6 +3,14 @@
 
   h2 {
     margin-bottom: 64px;
+
+    @include m($xl) {
+      margin-bottom: 44px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   &__wrapper {
@@ -10,6 +18,18 @@
     justify-content: space-between;
     padding-top: 56px;
     border-top: 1px solid #abb9ca;
+
+    @include m($xl) {
+      padding-top: 45px;
+    }
+
+    @include m($lg) {
+      padding-top: 40px;
+    }
+
+    @include m($md) {
+      flex-direction: column;
+    }
   }
 
   h5 {
@@ -33,8 +53,25 @@
   }
 
   &__info {
-    margin-right: 15px;
+    margin-right: 24px;
     width: 100%;
     max-width: 384px;
+
+    @include m($md) {
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__contact {
+    width: 100%;
+  }
+
+  @include m($xl) {
+    padding: 180px 0 85px;
+  }
+
+  @include m($lg) {
+    padding: 120px 0 64px;
   }
 }

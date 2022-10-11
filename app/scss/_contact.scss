@@ -6,6 +6,10 @@
     @include rv-line;
 
     margin-bottom: 66px;
+
+    @include m($lg) {
+      margin-bottom: 58px;
+    }
   }
 
   &__group {
@@ -16,6 +20,10 @@
     h5 {
       margin-bottom: 8px;
       max-width: 274px;
+
+      @include m($md) {
+        max-width: 100%;
+      }
     }
 
     h6 {
@@ -41,6 +49,19 @@
         margin-top: 8px;
       }
     }
+
+    @include m(820) {
+      grid-gap: 24px 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 
@@ -51,10 +72,28 @@
     span {
       color: #767e8b;
     }
+
+    @include m($lg) {
+      margin-right: 0;
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include m($lg) {
+      flex-direction: column;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
