@@ -14,18 +14,40 @@
 <header class="header">
   <div class="container">
     <nav class="menu">
-      <a class="logo" href="#">
+      <a class="logo" href="index.html">
         <img src="images/logo.svg" alt="Logo">
       </a>
-      <ul>
+      <ul class="menu__list">
         <li>
           <a href="#">LOAN PRODUCTS</a>
         </li>
         <li>
           <a href="#">INVESTORS</a>
         </li>
-        <li>
+        <li class="menu__active">
           <a href="#">RESOURCES</a>
+          <div class="menu__drop">
+            <a href="#">Blog</a>
+            <a href="#">FAQ</a>
+          </div>
+        </li>
+        <li class="menu__active-mobile">
+          <div class="panel-group" id="accordion1">
+            <div class="panel">
+              <div class="panel-title">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse-mobile">
+                  RESOURCES
+                </a>
+              </div>
+              <div id="collapse-mobile" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <a href="#">Blog</a>
+                  <a href="#">FAQ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </li>
         <li>
           <a href="#">CAREER</a>
@@ -34,10 +56,20 @@
           <a href="contact.html">Contact</a>
         </li>
       </ul>
-      <a class="rv-button" href="#">Get financing</a>
+      <a class="rv-button" href="#">
+        <div class="rv-button__wrap">
+          <p>Get financing</p>
+          <p>Get financing</p>
+        </div>
+      </a>
+      <button class="burger">
+        <img src="images/burger-cl.svg" alt="Img">
+        <img src="images/burger-op.svg" alt="Img">
+      </button>
     </nav>
   </div>
 </header>
+
 <main class="main">
   <section class="financing">
     <div class="container">
