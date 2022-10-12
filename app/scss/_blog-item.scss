@@ -3,6 +3,10 @@
 
   h2 {
     margin-bottom: 32px;
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   &__descr {
@@ -32,15 +36,28 @@
         }
       }
     }
+
+    @include m($lg) {
+      margin-bottom: 32px;
+    }
   }
 
   .terms__wrapper {
     padding-top: 0;
     border-top: none;
+
+    @include m($lg) {
+      flex-direction: column;
+    }
   }
 
   .terms__main {
     max-width: 792px;
+
+    @include m($lg) {
+      margin-bottom: 40px;
+      max-width: 100%;
+    }
   }
 
   &__contact {
@@ -51,6 +68,26 @@
 
     h6 {
       margin-bottom: 40px;
+
+      @include m($lg) {
+        margin-bottom: 24px;
+      }
     }
+
+    @include m($lg) {
+      position: relative;
+      top: 0;
+      margin-right: 0;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  @include m($xl) {
+    padding: 140px 0 85px;
+  }
+
+  @include m($lg) {
+    padding: 120px 0 64px;
   }
 }

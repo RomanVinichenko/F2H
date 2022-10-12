@@ -327,13 +327,25 @@ h6 {
 
   p {
     margin-bottom: 16px;
-    max-width: 688px;
+    max-width: 60%;
     color: #fff;
+
+    @include m($lg) {
+      display: none;
+    }
+
+    @include m($md) {
+      max-width: 100%;
+    }
   }
 
   h2 {
-    max-width: 688px;
+    max-width: 60%;
     color: #fff;
+
+    @include m($md) {
+      max-width: 100%;
+    }
   }
 
   .container {
@@ -347,6 +359,10 @@ h6 {
 
 .big-preview {
   height: 600px;
+
+  @include m($lg) {
+    height: 400px;
+  }
 }
 
 .qualify {
@@ -384,7 +400,7 @@ h6 {
 .back-button {
   display: flex;
   align-items: center;
-  margin-bottom: 32px !important;
+  margin-bottom: 32px;
   height: 24px;
 
   svg {
@@ -399,6 +415,10 @@ h6 {
     line-height: 22px;
     text-transform: uppercase;
     color: #011d47 !important;
+  }
+
+  @include m($lg) {
+    margin-bottom: 24px;
   }
 }
 
@@ -419,6 +439,10 @@ h6 {
     @include rv-line;
 
     margin-bottom: 82px;
+
+    @include m($lg) {
+      margin-bottom: 64px;
+    }
   }
 
   ul {
@@ -434,8 +458,18 @@ h6 {
       img {
         width: 100%;
         height: 382px;
+        min-height: 285px;
         max-height: 382px;
         object-fit: cover;
+
+        @include m($lg) {
+          height: 300px;
+        }
+
+        @include m(830) {
+          height: auto;
+          min-height: 285px;
+        }
       }
 
       &:first-child {
@@ -457,7 +491,24 @@ h6 {
           }
         }
       }
+
+      @include m($lg) {
+        margin: 24px 0 12px;
+      }
     }
+
+    @include m(830) {
+      grid-gap: 40px 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 
