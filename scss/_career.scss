@@ -7,6 +7,14 @@
     width: 100%;
     max-width: 792px;
   }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
+  }
 }
 
 .swiper {
@@ -57,6 +65,14 @@
       left: 50%;
       transform: translateX(-50%);
     }
+
+    @include m($lg) {
+      margin: 0 auto 70px;
+    }
+
+    @include m($md) {
+      margin: 0 auto 58px;
+    }
   }
 
   h3:last-of-type {
@@ -71,6 +87,12 @@
     line-height: 32px;
     text-align: center;
     color: #394b65;
+
+    @include m($lg) {
+      margin-bottom: 54px;
+      font-size: 22px;
+      line-height: 30px;
+    }
   }
 }
 
@@ -88,20 +110,41 @@
   border-radius: 50%;
   background-color: #f0f5ff;
   transform: translateY(-50%);
+  transition: all 0.3s;
 
   svg {
     path {
       transition: all 0.3s;
     }
   }
+
+  &:hover {
+    border: 1px solid #09268d;
+  }
 }
 
 .swiper-button-prev {
   left: 0;
+
+  @include m(1047) {
+    top: auto;
+    bottom: 0;
+    width: 56px;
+    height: 56px;
+    transform: none;
+  }
 }
 
 .swiper-button-next {
   right: 0;
+
+  @include m(1047) {
+    top: auto;
+    bottom: 0;
+    width: 56px;
+    height: 56px;
+    transform: none;
+  }
 }
 
 .swiper-button-disabled {
@@ -110,6 +153,10 @@
       stroke: #abb9ca;
     }
   }
+
+  &:hover {
+    border: 1px solid #bed4ff;
+  }
 }
 
 .swiper-pagination {
@@ -117,6 +164,10 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
+
+  @include m(1047) {
+    margin-bottom: 22px;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -130,6 +181,10 @@
   &:not(:last-child) {
     margin-right: 16px;
   }
+
+  &:hover {
+    background-color: #09268d;
+  }
 }
 
 .swiper-pagination-bullet-active {
@@ -142,12 +197,24 @@
   h3 {
     @include rv-line;
 
-    margin: 0 auto 106px;
+    margin: 0 auto 74px;
     text-align: center;
 
     &::after {
       left: 50%;
       transform: translateX(-50%);
     }
+
+    @include m($lg) {
+      margin: 0 auto 66px;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }

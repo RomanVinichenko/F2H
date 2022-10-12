@@ -5,12 +5,42 @@
     @include rv-line;
 
     margin-bottom: 82px;
+
+    @include m($lg) {
+      margin-bottom: 50px;
+      color: #09268d;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @include m($md) {
+      margin-bottom: 32px;
+    }
   }
 
   p {
     &:not(:last-child) {
       margin-bottom: 28px;
+
+      @include m($xl) {
+        margin-bottom: 26px;
+      }
     }
+
+    @include m($xl) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 
@@ -22,12 +52,24 @@
     @include rv-line;
 
     margin-bottom: 82px;
+
+    @include m($xl) {
+      margin-bottom: 70px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 58px;
+    }
   }
 
   &__wrapper {
     position: relative;
     display: flex;
     justify-content: space-between;
+
+    @include m($md) {
+      display: none;
+    }
   }
 
   .nav-tabs {
@@ -46,9 +88,8 @@
         display: flex;
         align-items: center;
         margin: 0;
-        padding: 0 24px;
+        padding: 16px 24px;
         width: 100%;
-        height: 64px;
         border: none;
         border-radius: 0;
         font-weight: 600;
@@ -86,11 +127,20 @@
         }
       }
     }
+
+    @include m($xl) {
+      max-width: 410px;
+    }
+
+    @include m($lg) {
+      max-width: 50%;
+    }
   }
 
   .tab-content {
     position: sticky;
     top: 110px;
+    margin-left: 35px;
     height: fit-content;
 
     .tab-pane {
@@ -99,6 +149,19 @@
         color: #394b65;
       }
     }
+
+    @include m($lg) {
+      top: 76px;
+      margin-left: 25px;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 
@@ -131,5 +194,70 @@
         }
       }
     }
+  }
+}
+
+.property-mobile {
+  display: none;
+
+  .accordion-toggle {
+    padding: 30px 16px 16px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.04em;
+    color: #011d47;
+    background-color: #fff;
+    transition: background-color 0.1s, padding 0.3s;
+  }
+
+  .collapsed {
+    padding: 30px 16px;
+    background-color: transparent;
+    transition: background-color 1s, padding 0.3s;
+  }
+
+  .panel-title {
+    font-size: 24px;
+  }
+
+  .panel-group {
+    margin: 0;
+    border-top: 1px solid #abb9ca;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+  }
+
+  .panel-body {
+    padding: 0 16px 30px;
+    background-color: #fff;
+
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+      color: #394b65;
+    }
+  }
+
+  .panel {
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #abb9ca;
+    border-left: none;
+    border-radius: 0;
+    box-shadow: none;
+    background-color: transparent;
+
+    + .panel {
+      margin: 0;
+    }
+  }
+
+  @include m($md) {
+    display: block;
   }
 }

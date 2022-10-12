@@ -5,7 +5,24 @@
   p {
     &:not(:last-child) {
       margin-bottom: 28px;
+
+      @include m($xl) {
+        margin-bottom: 26px;
+      }
     }
+
+    @include m($xl) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 
@@ -13,13 +30,20 @@
   span {
     display: block;
     margin-bottom: 48px;
+
+    @include m($lg) {
+      margin-bottom: 40px;
+    }
+
+    @include m($md) {
+      margin-bottom: 32px;
+    }
   }
 
   .nav-tabs {
     li {
       a {
-        padding: 0 24px 0 48px;
-        height: 92px;
+        padding: 30px 48px;
       }
     }
   }
@@ -52,5 +76,19 @@
         }
       }
     }
+  }
+}
+
+.capital-very__mobile {
+  .accordion-toggle {
+    background-color: #f0f5ff;
+  }
+
+  .collapsed {
+    background-color: #fff;
+  }
+
+  .panel-body {
+    background-color: #f0f5ff;
   }
 }

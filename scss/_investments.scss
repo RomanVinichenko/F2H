@@ -6,19 +6,34 @@
     @include rv-line;
 
     margin-bottom: 26px;
+
+    @include m(820) {
+      margin-bottom: 58px;
+    }
   }
 
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include m(820) {
+      flex-direction: column;
+    }
   }
 
   &__img {
     margin-right: 30px;
 
     img {
+      margin: 0 auto;
       object-fit: cover;
+    }
+
+    @include m(820) {
+      margin: 0 auto 32px;
+      width: 100%;
+      max-width: 100%;
     }
   }
 
@@ -30,8 +45,33 @@
 
       &:not(:last-child) {
         margin-bottom: 28px;
+
+        @include m($xl) {
+          margin-bottom: 26px;
+        }
+      }
+
+      @include m($xl) {
+        font-size: 18px;
+        line-height: 26px;
       }
     }
+
+    @include m($xl) {
+      max-width: 48%;
+    }
+
+    @include m(820) {
+      max-width: 100%;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 

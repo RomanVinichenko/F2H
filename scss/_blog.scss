@@ -2,11 +2,31 @@
   padding: 228px 0 120px;
   background-color: #f0f5ff;
 
+  h2 {
+    @include m($md) {
+      margin-bottom: 24px;
+    }
+  }
+
   &__img {
-    width: 100%;
-    height: 382px;
-    max-height: 382px;
     overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 382px;
+      object-fit: cover;
+      transform: scale(1);
+      transition: all 0.3s;
+
+      @include m($lg) {
+        height: 320px;
+      }
+
+      @include m($md) {
+        height: 224px;
+      }
+    }
   }
 
   &__main {
@@ -16,6 +36,7 @@
 
     label {
       position: relative;
+      margin: 0;
       height: 56px;
 
       button {
@@ -78,7 +99,24 @@
             color: #abb9ca;
           }
         }
+
+        @include m($lg) {
+          width: 448px;
+        }
+
+        @include m($md) {
+          width: 100%;
+        }
       }
+    }
+
+    @include m($lg) {
+      margin-bottom: 48px;
+    }
+
+    @include m($md) {
+      flex-direction: column;
+      margin-bottom: 32px;
     }
   }
 
@@ -92,6 +130,7 @@
     li {
       a {
         width: 100%;
+        height: fit-content;
 
         &:hover {
           h5 {
@@ -103,14 +142,6 @@
             transform: scale(1.04);
           }
         }
-      }
-
-      img {
-        width: 100%;
-        height: 382px;
-        max-height: 382px;
-        object-fit: cover;
-        transition: all 0.3s;
       }
 
       h5 {
@@ -142,6 +173,19 @@
           }
         }
       }
+
+      @include m($lg) {
+        margin: 24px 0 12px;
+      }
+    }
+
+    @include m($lg) {
+      padding-top: 40px;
+    }
+
+    @include m($md) {
+      grid-gap: 40px 0;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -185,6 +229,10 @@
 
       + li {
         margin-left: 16px;
+
+        @include m($md) {
+          margin-left: 11px;
+        }
       }
     }
 
@@ -216,6 +264,22 @@
         }
       }
     }
+
+    @include m($lg) {
+      margin-top: 66px;
+    }
+
+    @include m($md) {
+      margin-top: 56px;
+    }
+  }
+
+  @include m($xl) {
+    padding: 180px 0 110px;
+  }
+
+  @include m($lg) {
+    padding: 120px 0 99px;
   }
 }
 
@@ -244,5 +308,13 @@
       left: 50%;
       transform: translateX(-50%);
     }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
