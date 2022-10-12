@@ -106,6 +106,7 @@ h6 {
   position: sticky;
   top: 110px;
   margin-right: 35px;
+  padding-top: 68px;
   width: max-content;
   height: fit-content;
 
@@ -152,8 +153,11 @@ h6 {
     position: relative;
     top: 0;
     margin-right: 0;
-    margin-bottom: 40px;
     width: 100%;
+  }
+
+  @include m($xl) {
+    padding-top: 40px;
   }
 }
 
@@ -779,4 +783,30 @@ h6 {
       stroke: #abb9ca;
     }
   }
+}
+
+.strategy_under_img_1,
+.strategy_under_img_2 {
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -0.06em;
+
+  @include m($xl) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include m($lg) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+}
+
+.strategy_under_img_1 {
+  color: #09268d;
+}
+
+.strategy_under_img_2 {
+  color: #ff535e;
 }

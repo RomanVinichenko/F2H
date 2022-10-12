@@ -24,10 +24,24 @@
 
   &__img {
     margin-right: 30px;
+    width: 100%;
+    height: 100%;
 
     img {
-      margin: 0 auto;
-      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      max-width: 80%;
+      object-fit: contain;
+
+      @include m($lg) {
+        max-width: 100%;
+      }
+
+      @include m(820) {
+        margin: 0 auto;
+        max-height: 400px;
+      }
     }
 
     @include m(820) {
@@ -82,11 +96,19 @@
     @include rv-line;
 
     margin-bottom: 66px;
+
+    @include m($lg) {
+      margin-bottom: 58px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include m(820) {
+      flex-direction: column;
+    }
   }
 
   &__info {
@@ -97,14 +119,53 @@
 
       &:not(:last-child) {
         margin-bottom: 28px;
+
+        @include m($xl) {
+          margin-bottom: 26px;
+        }
       }
+
+      @include m($xl) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    @include m($xl) {
+      max-width: 48%;
+    }
+
+    @include m(820) {
+      margin-bottom: 32px;
+      width: 100%;
+      max-width: 100%;
     }
   }
 
   &__img {
-    img:first-of-type {
-      margin-bottom: 32px;
+    margin-left: 30px;
+    width: 100%;
+
+    img {
+      margin: 0 auto 32px;
+      width: 100%;
+      min-height: 240px;
+      max-height: 341px;
+      object-fit: cover;
     }
+
+    @include m(820) {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 
@@ -116,6 +177,10 @@
     @include rv-line;
 
     margin-bottom: 66px;
+
+    @include m($lg) {
+      margin-bottom: 58px;
+    }
   }
 
   &__top {
@@ -128,12 +193,24 @@
       margin-right: 24px;
       max-width: 384px;
       color: #394b65;
+
+      @include m($xl) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      @include m($lg) {
+        margin-right: 0;
+        margin-bottom: 32px;
+        max-width: 100%;
+      }
     }
 
     ul {
       display: grid;
       grid-gap: 0 22px;
       grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
 
       img {
         margin: 0 auto 24px;
@@ -144,7 +221,26 @@
       h6 {
         margin: 0 auto;
         text-align: center;
+
+        @include m($xl) {
+          font-size: 22px;
+          line-height: 30px;
+        }
       }
+
+      @include m($md) {
+        grid-gap: 24px 0;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @include m($lg) {
+      flex-direction: column;
+      margin-bottom: 70px;
+    }
+
+    @include m($md) {
+      margin-bottom: 56px;
     }
   }
 
@@ -152,9 +248,29 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include m($md) {
+      flex-direction: column;
+    }
+  }
+
+  &__bot-img {
+    width: 100%;
+
+    img {
+      width: 100%;
+      min-height: 241px;
+      max-height: 341px;
+      object-fit: cover;
+
+      @include m($md) {
+        margin-bottom: 32px;
+      }
+    }
   }
 
   &__bot-info {
+    margin-left: 30px;
     max-width: 588px;
 
     p {
@@ -162,26 +278,65 @@
 
       &:not(:last-child) {
         margin-bottom: 28px;
+
+        @include m($xl) {
+          margin-bottom: 26px;
+        }
+      }
+
+      @include m($xl) {
+        font-size: 18px;
+        line-height: 26px;
       }
     }
+
+    @include m($lg) {
+      max-width: 42%;
+    }
+
+    @include m($md) {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 
 .investments {
   padding: 120px 0;
 
+  &__contact {
+    width: 100%;
+  }
+
   h3 {
     @include rv-line;
 
     margin-bottom: 66px;
+
+    @include m($lg) {
+      margin-bottom: 58px;
+    }
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include m($md) {
+      flex-direction: column;
+    }
   }
 
   &__info {
+    margin-right: 30px;
     max-width: 487px;
 
     p {
@@ -189,7 +344,34 @@
 
       &:not(:last-child) {
         margin-bottom: 28px;
+
+        @include m($xl) {
+          margin-bottom: 26px;
+        }
+      }
+
+      @include m($xl) {
+        font-size: 18px;
+        line-height: 26px;
       }
     }
+
+    @include m($lg) {
+      max-width: 50%;
+    }
+
+    @include m($md) {
+      margin-right: 0;
+      margin-bottom: 28px;
+      max-width: 100%;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }

@@ -14,10 +14,38 @@
     width: 60%;
     height: 100%;
     background-color: rgba(#011d47, 0.72);
+
+    @include h($lg) {
+      width: 65%;
+    }
+
+    @include m(680) {
+      width: 100%;
+    }
   }
 
   .container {
     z-index: 5;
+  }
+
+  .rv-button {
+    &__wrap {
+      p {
+        @include h(830) {
+          height: 50px;
+          line-height: 50px;
+        }
+      }
+
+      @include h(830) {
+        height: 50px;
+      }
+    }
+
+    @include h(830) {
+      min-height: 50px;
+      max-height: 50px;
+    }
   }
 
   &__wrapper {
@@ -27,7 +55,7 @@
     justify-content: center;
     padding: 169px 0 81px;
     height: 100vh;
-    max-width: 688px;
+    max-width: 58%;
     color: #fff;
 
     h2 {
@@ -36,6 +64,27 @@
       @include h(982) {
         margin-bottom: 20px;
       }
+
+      @include h(830) {
+        margin-bottom: 15px;
+        font-size: 42px;
+        line-height: 50px;
+      }
+
+      @include m($xl) {
+        font-size: 42px;
+        line-height: 50px;
+      }
+
+      @include m($lg) {
+        font-size: 36px;
+        line-height: 48px;
+      }
+    }
+
+    @include m(680) {
+      width: 100%;
+      max-width: 100%;
     }
   }
 }
@@ -66,6 +115,10 @@
         @include h(917) {
           padding-bottom: 7px;
         }
+
+        @include h(830) {
+          padding-bottom: 5px;
+        }
       }
 
       p,
@@ -73,6 +126,10 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 24px;
+
+        @include h(830) {
+          font-size: 14px;
+        }
       }
 
       p {
@@ -87,6 +144,10 @@
       @include h(917) {
         padding-top: 7px;
       }
+
+      @include h(830) {
+        padding-top: 5px;
+      }
     }
   }
 
@@ -97,6 +158,11 @@
   @include h(917) {
     padding: 14px;
   }
+
+  @include m(680) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .asset {
@@ -105,8 +171,14 @@
   h3 {
     @include rv-line;
 
+    margin-right: 40px;
     margin-bottom: 26px;
     max-width: 894px;
+
+    @include m($lg) {
+      margin-right: 0;
+      max-width: 100%;
+    }
   }
 
   &__box {
@@ -114,7 +186,18 @@
     overflow: hidden;
 
     p {
+      margin: 0 !important;
+      font-weight: 600;
+      font-size: 24px !important;
+      line-height: 32px !important;
+      letter-spacing: -0.04em;
+      color: #09268d;
       transition: all 0.3s;
+
+      @include m($xl) {
+        font-size: 22px !important;
+        line-height: 30px !important;
+      }
     }
   }
 
@@ -123,6 +206,14 @@
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom: 56px;
+
+    @include m($xl) {
+      margin-bottom: 45px;
+    }
+
+    @include m($lg) {
+      margin-bottom: 32px;
+    }
   }
 
   .rv-secondary {
@@ -131,6 +222,10 @@
     p {
       color: #09268d;
     }
+
+    @include m($lg) {
+      display: none;
+    }
   }
 
   &__info {
@@ -138,7 +233,20 @@
     justify-content: space-between;
 
     p {
+      margin-right: 20px;
+      width: fit-content;
       max-width: 384px;
+
+      @include m($xl) {
+        margin-right: 40px;
+        font-size: 18px;
+        line-height: 26px;
+      }
+
+      @include m($lg) {
+        margin-right: 0;
+        max-width: 100%;
+      }
     }
 
     ul {
@@ -152,6 +260,7 @@
           position: relative;
           display: block;
           padding: 0 0 16px 32px;
+          width: fit-content;
           height: 100%;
           border-bottom: 1px solid transparent;
           font-weight: 600;
@@ -182,9 +291,43 @@
               transform: translateY(-100%);
             }
           }
+
+          @include m($xl) {
+            padding: 0 0 16px 24px;
+          }
+
+          @include m($lg) {
+            padding: 0 0 10px 24px;
+          }
         }
       }
+
+      @include m($xl) {
+        grid-gap: 12px 50px;
+        margin: 0 0 0 auto;
+      }
+
+      @include m($lg) {
+        margin: 32px 0 0;
+      }
+
+      @include m(630) {
+        grid-gap: 10px 0;
+        grid-template-columns: 1fr;
+      }
     }
+
+    @include m($lg) {
+      flex-direction: column;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 
@@ -210,6 +353,23 @@
     background-repeat: no-repeat;
     object-fit: cover;
     transform: translateY(-50%);
+
+    @include m($md) {
+      display: none;
+    }
+  }
+
+  img {
+    display: none;
+    margin-top: 32px;
+    width: 100%;
+    min-height: 195px;
+    max-height: 300px;
+    object-fit: contain;
+
+    @include m($md) {
+      display: block;
+    }
   }
 
   .container {
@@ -221,6 +381,10 @@
 
     z-index: 5;
     margin-bottom: 66px;
+
+    @include m($lg) {
+      margin-bottom: 58px;
+    }
   }
 
   &__info {
@@ -233,8 +397,25 @@
 
       &:not(:last-child) {
         margin-bottom: 28px;
+
+        @include m($xl) {
+          margin-bottom: 26px;
+        }
+      }
+
+      @include m($xl) {
+        font-size: 18px;
+        line-height: 26px;
       }
     }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 64px 0;
   }
 }
 
@@ -251,6 +432,11 @@
       left: 50%;
       transform: translateX(-50%);
     }
+
+    @include m($lg) {
+      margin: 0 auto 58px;
+      font-size: 32px;
+    }
   }
 
   p {
@@ -259,8 +445,17 @@
     text-align: center;
     color: #394b65;
 
-    &:not(:last-of-type) {
+    &:not(:last-child) {
       margin-bottom: 28px;
+
+      @include m($xl) {
+        margin-bottom: 26px;
+      }
+    }
+
+    @include m($xl) {
+      font-size: 18px;
+      line-height: 26px;
     }
   }
 
@@ -276,6 +471,23 @@
 
       + li {
         margin-left: 39px;
+
+        @include m($lg) {
+          margin-left: 25px;
+        }
+
+        @include m($md) {
+          margin-left: 20px;
+        }
+
+        @include m(640) {
+          margin-top: 39px;
+          margin-left: 0;
+        }
+      }
+
+      @include m(640) {
+        max-width: 100%;
       }
     }
 
@@ -299,5 +511,21 @@
       line-height: 24px;
       color: #394b65;
     }
+
+    @include m($lg) {
+      margin: 32px 0 auto;
+    }
+
+    @include m(640) {
+      flex-direction: column;
+    }
+  }
+
+  @include m($xl) {
+    padding: 85px 0;
+  }
+
+  @include m($lg) {
+    padding: 72px 0 64px;
   }
 }

@@ -27,7 +27,7 @@
 }
 
 .capital-very {
-  span {
+  &__text {
     display: block;
     margin-bottom: 48px;
 
@@ -90,5 +90,28 @@
 
   .panel-body {
     background-color: #f0f5ff;
+
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-right: 32px;
+      height: 24px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: #09268d;
+
+      &::after {
+        content: url("../images/tab-arrow.svg");
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 }
