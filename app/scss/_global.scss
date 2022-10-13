@@ -627,6 +627,35 @@ h6 {
     }
   }
 
+  .wpcf7-form-control-wrap {
+    width: 100%;
+
+    textarea {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 64px;
+      max-height: 64px !important;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      background-color: transparent;
+    }
+
+    select {
+      margin-bottom: 32px;
+      width: 100%;
+      outline: none;
+      border: none;
+    }
+  }
+
+  .wpcf7-file {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+  }
+
   p {
     width: 100%;
   }
@@ -638,11 +667,6 @@ h6 {
   span {
     display: block;
     width: 100%;
-  }
-
-  .textarea {
-    width: 100%;
-    height: 64px;
   }
 
   label {
@@ -669,33 +693,24 @@ h6 {
   }
 
   .wpcf7-submit {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 32px 0 0;
     padding: 0 33px;
     width: fit-content;
     height: 62px;
     min-width: fit-content;
     min-height: 62px;
     max-height: 62px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #fff;
     background-color: #011d47;
-    transition: all 0.3s;
-
-    p {
-      height: 62px;
-      font-weight: 600;
-      font-size: 14px;
-      line-height: 62px;
-      text-transform: uppercase;
-      color: #fff;
-      transition: all 0.3s;
-    }
-
-    &__wrap {
-      height: 62px;
-      overflow: hidden;
-    }
 
     &:focus,
     &:hover,
@@ -707,26 +722,10 @@ h6 {
 
     &:hover {
       background-color: #09268d;
-
-      p:first-of-type {
-        transform: translateY(-100%);
-      }
-
-      p:last-of-type {
-        transform: translateY(-100%);
-      }
     }
 
     &:disabled {
       background-color: #abb9ca;
-
-      p:first-of-type {
-        transform: translateY(0);
-      }
-
-      p:last-of-type {
-        transform: translateY(0);
-      }
     }
   }
 
