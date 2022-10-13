@@ -15,8 +15,8 @@
     height: 100%;
     background-color: rgba(#011d47, 0.72);
 
-    @include h($lg) {
-      width: 65%;
+    @include m($lg) {
+      width: 70%;
     }
 
     @include m(680) {
@@ -53,8 +53,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 169px 0 81px;
-    height: 100vh;
+    margin-top: 88px;
+    height: calc(100vh - 88px);
     max-width: 58%;
     color: #fff;
 
@@ -71,6 +71,11 @@
         line-height: 50px;
       }
 
+      @include h(752) {
+        font-size: 24px !important;
+        line-height: 30px !important;
+      }
+
       @include m($xl) {
         font-size: 42px;
         line-height: 50px;
@@ -80,10 +85,22 @@
         font-size: 36px;
         line-height: 48px;
       }
+
+      @include m(680) {
+        margin-bottom: 24px;
+      }
+    }
+
+    @include m($lg) {
+      margin-top: 56px;
+      height: calc(100vh - 56px);
+      max-width: 68%;
     }
 
     @include m(680) {
+      padding: 40px 0;
       width: 100%;
+      height: auto;
       max-width: 100%;
     }
   }
@@ -97,6 +114,10 @@
 
   h6 {
     margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 24px !important;
+    line-height: 32px !important;
+    letter-spacing: -0.04em;
     color: #bed4ff;
   }
 
@@ -130,6 +151,20 @@
         @include h(830) {
           font-size: 14px;
         }
+
+        @include m(680) {
+          font-size: 16px;
+        }
+
+        @include m($sm) {
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 24px;
+          letter-spacing: -0.04em;
+          text-align: right;
+          text-transform: uppercase;
+          color: #fff;
+        }
       }
 
       p {
@@ -151,7 +186,11 @@
     }
   }
 
-  @include h(982) {
+  @include m($lg) {
+    max-width: 550px;
+  }
+
+  @include h($lg) {
     margin-bottom: 20px;
   }
 
@@ -160,6 +199,7 @@
   }
 
   @include m(680) {
+    padding: 16px;
     width: 100%;
     max-width: 100%;
   }
