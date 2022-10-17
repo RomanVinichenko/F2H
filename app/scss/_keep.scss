@@ -144,6 +144,8 @@
     height: fit-content;
 
     .tab-pane {
+      max-width: 588px;
+
       p {
         max-width: 588px;
         color: #394b65;
