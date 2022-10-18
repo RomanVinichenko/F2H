@@ -272,6 +272,14 @@
             transform: translateY(-50%);
           }
         }
+
+        a {
+          transition: all 0.3s;
+
+          &:hover {
+            color: #09268d;
+          }
+        }
       }
 
       @include m($lg) {

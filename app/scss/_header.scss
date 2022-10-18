@@ -9,8 +9,8 @@
 
 .current_page_item {
   a {
-    border-bottom: 4px solid #09268d;
-    color: #09268d;
+    border-bottom: 4px solid #09268d !important;
+    color: #09268d !important;
   }
 }
 
@@ -18,8 +18,8 @@
   a {
     position: relative;
     padding-right: 16px;
-    border-bottom: 4px solid #09268d !important;
-    color: #09268d !important;
+    border-bottom: 4px solid transparent;
+    color: #011d47;
 
     &::before {
       content: url("../images/drop-arrow-blue.svg");
