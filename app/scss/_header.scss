@@ -13,7 +13,7 @@
     color: #09268d !important;
 
     @include m($lg) {
-      border: none;
+      border-bottom: none !important;
     }
   }
 }
@@ -22,7 +22,7 @@
   a {
     position: relative;
     padding-right: 16px;
-    border-bottom: none;
+    border-bottom: 4px solid transparent !important;
     color: #011d47;
 
     &::before {
@@ -46,13 +46,19 @@
     }
 
     a {
-      border-bottom: none;
+      border-bottom: 4px solid transparent !important;
+      color: #09268d;
 
       &::before {
         content: url("../images/drop-arrow.svg");
         transform: translateY(-50%) rotate(180deg);
       }
     }
+  }
+
+  @include m($lg) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -307,6 +313,14 @@
     &:hover {
       color: #09268d !important;
     }
+  }
+
+  @include m($lg) {
+    position: relative;
+    top: auto;
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
   }
 }
 
