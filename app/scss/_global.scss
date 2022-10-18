@@ -949,3 +949,10 @@ h6 {
     padding: 120px 0 38px;
   }
 }
+
+.menu-footer-menu {
+  .current_page_item {
+    border-bottom: none !important;
+    color: #011d47 !important;
+  }
+}
