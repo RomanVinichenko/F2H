@@ -7,7 +7,7 @@
   background-color: #fff;
 }
 
-.menu {
+.rv-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,7 +57,7 @@
     }
 
     &:hover {
-      .menu__drop {
+      .rv-menu__drop {
         visibility: visible;
         opacity: 1;
       }
@@ -244,7 +244,7 @@
   }
 }
 
-.menu__drop {
+.rv-menu__drop {
   position: absolute;
   top: 79px;
   visibility: hidden;
