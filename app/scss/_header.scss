@@ -7,7 +7,34 @@
   background-color: #fff;
 }
 
+.current_page_item {
+  a {
+    border-bottom: 4px solid #09268d;
+    color: #09268d;
+  }
+}
+
 .menu-item-type-custom {
+  a {
+    position: relative;
+    padding-right: 16px;
+    border-bottom: 4px solid #09268d !important;
+    color: #09268d !important;
+
+    &::before {
+      content: url("../images/drop-arrow-blue.svg");
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 12px;
+      height: 12px;
+      font-size: 0;
+      line-height: 1;
+      transform: translateY(-50%);
+      transition: all 0.4s;
+    }
+  }
+
   &:hover {
     .sub-menu {
       visibility: visible;
@@ -19,6 +46,10 @@
         transform: translateY(-50%) rotate(180deg);
       }
     }
+  }
+
+  @include m($lg) {
+    display: none !important;
   }
 }
 
@@ -47,45 +78,6 @@
       padding: 0 16px;
       min-height: 38px;
       max-height: 38px;
-    }
-  }
-
-  &__active {
-    a {
-      position: relative;
-      padding-right: 16px;
-      border-bottom: 4px solid #09268d !important;
-      color: #09268d !important;
-
-      &::before {
-        content: url("../images/drop-arrow-blue.svg");
-        position: absolute;
-        right: 0;
-        top: 50%;
-        width: 12px;
-        height: 12px;
-        font-size: 0;
-        line-height: 1;
-        transform: translateY(-50%);
-        transition: all 0.4s;
-      }
-    }
-
-    &:hover {
-      .sub-menu {
-        visibility: visible;
-        opacity: 1;
-      }
-
-      a {
-        &::before {
-          transform: translateY(-50%) rotate(180deg);
-        }
-      }
-    }
-
-    @include m($lg) {
-      display: none !important;
     }
   }
 
