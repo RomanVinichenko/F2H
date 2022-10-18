@@ -50,7 +50,7 @@
       color: #09268d;
 
       &::before {
-        content: url("../images/drop-arrow.svg");
+        content: url("../images/drop-arrow-blue.svg");
         transform: translateY(-50%) rotate(180deg);
       }
     }
@@ -298,7 +298,7 @@
 
   a {
     padding-right: 0;
-    border: none !important;
+    border-bottom: none !important;
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
@@ -311,6 +311,7 @@
     }
 
     &:hover {
+      border: none !important;
       color: #09268d !important;
     }
   }
