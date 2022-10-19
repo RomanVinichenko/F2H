@@ -985,6 +985,8 @@ h6 {
 }
 
 .form-file-wrap {
+  position: relative;
+
   input {
     display: none !important;
   }
@@ -1007,12 +1009,22 @@ h6 {
   text-transform: uppercase;
   color: #011d47;
   background: #fff;
+
+  &::after {
+    content: url("../images/upload.svg");
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
+  }
 }
 
 #form-file-info {
   position: absolute;
   right: 0;
-  top: 0;
+  top: 50%;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -1020,9 +1032,12 @@ h6 {
   letter-spacing: -0.04em;
   text-transform: uppercase;
   color: #011d47;
+  transform: translateY(-50%);
 }
 
 .wpcf7-select {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #767e8b;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
