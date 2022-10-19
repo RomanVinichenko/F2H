@@ -962,7 +962,7 @@ h6 {
 
 .wpcf7-not-valid-tip {
   position: absolute;
-  top: 46px;
+  top: 44px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -971,8 +971,17 @@ h6 {
   color: #ff535e;
 }
 
+.wpcf7-spinner {
+  opacity: 0;
+  background-color: transparent;
+}
+
 .form-file-wrap {
   position: relative;
+
+  .wpcf7-not-valid-tip {
+    top: -28px !important;
+  }
 
   input {
     display: none !important;
@@ -1010,10 +1019,6 @@ h6 {
 
 .wpcf7-response-output {
   display: none;
-}
-
-.wpcf7-not-valid-tip:last-of-type {
-  top: 60px !important;
 }
 
 #form-file-info {
