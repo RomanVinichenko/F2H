@@ -7,6 +7,25 @@
   background-color: #fff;
 }
 
+.menu-item-type-post_type {
+  a {
+    border-bottom: 4px solid transparent;
+
+    &:hover {
+      border-bottom: 4px solid #09268d;
+      color: #09268d;
+    }
+
+    @include m($lg) {
+      border-bottom: 1px solid #f0f5ff;
+
+      &:hover {
+        border-bottom: 1px solid #f0f5ff;
+      }
+    }
+  }
+}
+
 .current_page_item {
   a {
     border-bottom: 4px solid #09268d !important;
@@ -19,8 +38,6 @@
 }
 
 .menu-item-type-custom {
-  border: none !important;
-
   a {
     position: relative;
     padding-right: 16px;
@@ -45,7 +62,7 @@
     }
 
     &:hover {
-      border-bottom: 4px solid transparent !important;
+      border-bottom: 4px solid transparent;
     }
 
     @include m($lg) {
@@ -55,24 +72,17 @@
   }
 
   &:hover {
-    border: none !important;
-
     .sub-menu {
       visibility: visible;
       opacity: 1;
     }
 
     a {
-      border-bottom: 4px solid transparent;
       color: #09268d;
 
       &::before {
         content: url("../images/drop-arrow-blue.svg");
         transform: translateY(-50%) rotate(180deg);
-      }
-
-      @include m($lg) {
-        border: none !important;
       }
     }
   }
@@ -137,18 +147,12 @@
         display: flex;
         align-items: center;
         height: 100%;
-        border-bottom: 4px solid transparent;
         font-weight: 600;
         font-size: 14px;
         line-height: 22px;
         text-transform: uppercase;
         color: #011d47;
         transition: all 0.3s;
-
-        &:hover {
-          border-bottom: 4px solid #09268d;
-          color: #09268d;
-        }
 
         @include m($lg) {
           padding: 24px 16px;
@@ -223,6 +227,10 @@
     border-bottom: 8px solid #fff;
     border-left: 8px solid transparent;
     transform: translateX(-50%);
+
+    @include m($lg) {
+      display: none;
+    }
   }
 
   li {
