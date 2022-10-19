@@ -9,6 +9,7 @@
 
 .menu-item-type-post_type {
   a {
+    height: 100%;
     border-bottom: 4px solid transparent;
 
     &:hover {
@@ -21,6 +22,14 @@
 
       &:hover {
         border-bottom: 1px solid #f0f5ff;
+      }
+    }
+  }
+
+  &:first-child {
+    a {
+      @include m($lg) {
+        border-top: 1px solid #f0f5ff;
       }
     }
   }
@@ -93,7 +102,6 @@
   @include m($lg) {
     display: flex;
     flex-direction: column;
-    border: none !important;
   }
 }
 
@@ -149,7 +157,6 @@
       a {
         display: flex;
         align-items: center;
-        height: 100%;
         font-weight: 600;
         font-size: 14px;
         line-height: 22px;
@@ -163,14 +170,6 @@
           font-weight: 500;
           font-size: 18px;
           line-height: 26px;
-        }
-      }
-
-      &:first-child {
-        a {
-          @include m($lg) {
-            border-top: 1px solid #f0f5ff;
-          }
         }
       }
     }
