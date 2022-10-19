@@ -592,7 +592,7 @@ h6 {
   .text-label-span {
     position: absolute;
     left: 0;
-    top: 28px;
+    top: 0;
     width: 100%;
     font-weight: 500;
     font-size: 12px;
@@ -607,6 +607,10 @@ h6 {
     grid-gap: 32px 24px;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 56px;
+
+    .text-label-span {
+      top: 28px;
+    }
 
     label {
       margin: 0;
@@ -637,10 +641,16 @@ h6 {
       height: 64px !important;
       max-height: 64px !important;
       overflow: hidden;
+      outline: none;
       border-top: none;
       border-right: none;
       border-bottom: none;
       border-left: none;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: -0.04em;
+      color: #011d47;
       background-color: transparent;
     }
 
@@ -961,7 +971,7 @@ h6 {
 
 .wpcf7-not-valid-tip {
   position: absolute;
-  top: 73px;
+  top: 46px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 12px;

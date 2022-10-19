@@ -229,8 +229,8 @@
   visibility: hidden;
   opacity: 0;
   padding: 24px;
-  width: 100%;
-  height: auto;
+  width: fit-content;
+  height: 100%;
   overflow: hidden;
   background-color: #fff;
   filter: drop-shadow(0 2px 24px rgba(10, 22, 84, 0.1));
@@ -264,6 +264,10 @@
 
     + li {
       margin-left: 0;
+
+      @include m($lg) {
+        margin-left: 16px;
+      }
     }
 
     &:first-child {
