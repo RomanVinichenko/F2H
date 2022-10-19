@@ -167,8 +167,8 @@ h6 {
   align-items: center;
   justify-content: center;
   padding: 0 33px;
-  width: fit-content;
-  min-width: fit-content;
+  width: fit-content !important;
+  min-width: fit-content !important;
   min-height: 62px;
   max-height: 62px;
   background-color: #011d47;
@@ -633,8 +633,11 @@ h6 {
 
   .wpcf7-form-control-wrap {
     width: 100%;
+    height: fit-content;
 
     textarea {
+      position: absolute;
+      top: 30px;
       margin: 0;
       padding: 0;
       width: 100%;

@@ -15,6 +15,10 @@
       content: url("../images/drop-arrow-blue.svg") !important;
       transform: translateY(-50%) rotate(180deg) !important;
     }
+
+    &:first-of-type {
+      color: #09268d;
+    }
   }
 }
 
@@ -29,6 +33,7 @@
     }
 
     @include m($lg) {
+      width: 100%;
       border-bottom: 1px solid #f0f5ff;
 
       &:hover {
@@ -188,7 +193,6 @@
 
         @include m($lg) {
           padding: 24px 16px;
-          width: 100%;
           font-weight: 500;
           font-size: 18px;
           line-height: 26px;
