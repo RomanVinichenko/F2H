@@ -45,11 +45,11 @@
     }
 
     &:hover {
-      border-bottom: 4px solid transparent;
+      border-bottom: 4px solid transparent !important;
     }
 
     @include m($lg) {
-      border-bottom: none;
+      border-bottom: none !important;
       background-color: #f0f5ff;
     }
   }
@@ -237,6 +237,10 @@
     + li {
       margin-left: 0;
     }
+
+    @include m($lg) {
+      margin-bottom: 24px;
+    }
   }
 
   a {
@@ -259,7 +263,8 @@
     }
 
     @include m($lg) {
-      padding: 0 !important;
+      padding: 0 0 0 16px !important;
+      border-bottom: none !important;
     }
   }
 
@@ -268,7 +273,7 @@
     top: auto;
     visibility: visible;
     opacity: 1;
-    padding: 0 16px 24px;
+    padding: 0 !important;
     width: 100%;
     box-shadow: none;
     background-color: #f0f5ff;
@@ -277,10 +282,12 @@
 }
 
 .close-menu-accordion {
-  padding: 0;
-  height: 0 !important;
-  overflow: hidden;
-  transition: all 0.3s;
+  @include m($lg) {
+    padding: 0;
+    height: 0 !important;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
 }
 
 .burger {
