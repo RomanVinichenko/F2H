@@ -13,7 +13,7 @@
     color: #09268d !important;
 
     @include m($lg) {
-      border: none;
+      border-bottom: none !important;
     }
   }
 }
@@ -22,7 +22,7 @@
   a {
     position: relative;
     padding-right: 16px;
-    border-bottom: none;
+    border-bottom: 4px solid transparent;
     color: #011d47;
 
     &::before {
@@ -37,6 +37,11 @@
       transform: translateY(-50%);
       transition: all 0.4s;
     }
+
+    @include m($lg) {
+      border-bottom: none;
+      background-color: #f0f5ff;
+    }
   }
 
   &:hover {
@@ -46,13 +51,19 @@
     }
 
     a {
-      border-bottom: none;
+      border-bottom: 4px solid transparent;
+      color: #09268d;
 
       &::before {
-        content: url("../images/drop-arrow.svg");
+        content: url("../images/drop-arrow-blue.svg");
         transform: translateY(-50%) rotate(180deg);
       }
     }
+  }
+
+  @include m($lg) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -81,89 +92,6 @@
       padding: 0 16px;
       min-height: 38px;
       max-height: 38px;
-    }
-  }
-
-  &__active-mobile {
-    display: none !important;
-    padding: 0 !important;
-
-    .panel-group {
-      margin-bottom: 0;
-      width: 100%;
-    }
-
-    .panel {
-      border: none;
-      border-radius: 0;
-      box-shadow: none;
-    }
-
-    .panel-body {
-      padding: 0;
-
-      a {
-        border: none;
-        text-transform: initial;
-        color: #011d47;
-        background-color: #f0f5ff;
-
-        &:hover {
-          border: none;
-        }
-      }
-    }
-
-    .panel-title {
-      font-size: 18px;
-
-      a {
-        position: relative;
-        padding: 24px 15px;
-        color: #09268d;
-        background-color: #f0f5ff;
-        transition: all 0.3s;
-
-        &::before {
-          content: url("../images/drop-arrow-mob.svg");
-          position: absolute;
-          right: 15px;
-          top: 50%;
-          width: 16px;
-          height: 16px;
-          font-size: 0;
-          line-height: 1;
-          transform: translateY(-50%);
-          transition: all 0.4s;
-        }
-
-        &:hover {
-          &::before {
-            content: url("../images/drop-arrow-mob.svg");
-          }
-        }
-      }
-
-      .collapsed {
-        color: #011d47;
-
-        &::before {
-          content: url("../images/drop-arrow-mob-blue.svg");
-          transform: translateY(-50%) rotate(180deg);
-        }
-
-        &:hover {
-          color: #09268d;
-
-          &::before {
-            content: url("../images/drop-arrow-mob.svg");
-          }
-        }
-      }
-    }
-
-    @include m($lg) {
-      display: block !important;
     }
   }
 
@@ -283,6 +211,10 @@
   li {
     &:not(:last-child) {
       margin-bottom: 16px;
+
+      @include m($lg) {
+        margin-bottom: 24px;
+      }
     }
 
     + li {
@@ -292,7 +224,7 @@
 
   a {
     padding-right: 0;
-    border: none !important;
+    border-bottom: none !important;
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
@@ -305,8 +237,25 @@
     }
 
     &:hover {
+      border: none !important;
       color: #09268d !important;
     }
+
+    @include m($lg) {
+      padding: 0 !important;
+    }
+  }
+
+  @include m($lg) {
+    position: relative;
+    top: auto;
+    visibility: visible;
+    opacity: 1;
+    padding: 0 15px 24px;
+    width: 100%;
+    box-shadow: none;
+    background-color: #f0f5ff;
+    filter: none;
   }
 }
 
