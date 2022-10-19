@@ -979,3 +979,88 @@ h6 {
   letter-spacing: -0.04em;
   color: #ff535e;
 }
+
+// Denys styles
+
+#menu-footer-menu {
+  display: block;
+}
+
+.dad-pagination {
+  padding-top: 88px;
+  text-align: center;
+}
+
+.dad-pagination a {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 8px;
+  width: 46px;
+  height: 46px;
+  vertical-align: top;
+  border: 1px solid #abb9ca;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 46px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.dad-pagination a:hover {
+  color: #fff;
+  background-color: #011d47;
+}
+
+.dad-pagination span {
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 8px;
+  width: 46px;
+  height: 46px;
+  vertical-align: top;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 46px;
+  text-align: center;
+  color: #fff;
+  background-color: #011d47;
+}
+
+.dad-pagination .next {
+  position: relative;
+}
+
+.dad-pagination .next:hover {
+  background-color: #abb9ca;
+}
+
+.dad-pagination .next::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(https://f2h.celerart.com/wp-content/uploads/2022/10/ArrowRight.svg);
+}
+
+.dad-pagination .prev {
+  position: relative;
+}
+
+.dad-pagination .prev:hover {
+  background-color: #abb9ca;
+}
+
+.dad-pagination .prev::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(https://f2h.celerart.com/wp-content/uploads/2022/10/ArrowLeft.svg);
+}
