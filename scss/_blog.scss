@@ -108,6 +108,10 @@
           width: 100%;
         }
       }
+
+      @include m($md) {
+        width: 100%;
+      }
     }
 
     @include m($lg) {
