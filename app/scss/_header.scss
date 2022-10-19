@@ -19,6 +19,8 @@
 }
 
 .menu-item-type-custom {
+  border: none !important;
+
   a {
     position: relative;
     padding-right: 16px;
@@ -40,6 +42,10 @@
       @include m($lg) {
         right: 16px;
       }
+    }
+
+    &:hover {
+      border-bottom: 4px solid transparent;
     }
 
     @include m($lg) {
@@ -257,13 +263,6 @@
     }
   }
 
-  .close-menu-accordion {
-    padding: 0;
-    height: 0 !important;
-    overflow: hidden;
-    transition: all 0.3s;
-  }
-
   @include m($lg) {
     position: relative;
     top: auto;
@@ -275,6 +274,13 @@
     background-color: #f0f5ff;
     filter: none;
   }
+}
+
+.close-menu-accordion {
+  padding: 0;
+  height: 0 !important;
+  overflow: hidden;
+  transition: all 0.3s;
 }
 
 .burger {
