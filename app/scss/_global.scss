@@ -657,13 +657,6 @@ h6 {
       background-color: transparent;
       resize: none;
     }
-
-    select {
-      margin-bottom: 32px;
-      width: 100%;
-      outline: none;
-      border: none;
-    }
   }
 
   .wpcf7-file {
@@ -743,12 +736,6 @@ h6 {
     &:disabled {
       background-color: #abb9ca;
     }
-  }
-
-  .wpcf7-form-control .wpcf7-select {
-    margin-bottom: 32px;
-    width: 100%;
-    border: none;
   }
 
   .wpcf7-list-item {
@@ -1021,10 +1008,19 @@ h6 {
   }
 }
 
+.wpcf7-response-output {
+  display: none;
+}
+
+.wpcf7-not-valid-tip:last-of-type {
+  top: 60px !important;
+}
+
 #form-file-info {
   position: absolute;
   right: 0;
   top: 50%;
+  width: fit-content;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -1036,7 +1032,10 @@ h6 {
 }
 
 .wpcf7-select {
+  margin-bottom: 32px;
   padding-bottom: 16px;
+  width: 100%;
+  outline: none;
   border-bottom: 1px solid #767e8b;
   font-weight: 600;
   font-size: 14px;
