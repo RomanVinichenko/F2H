@@ -10,8 +10,8 @@
 .menu-arrow-rotate {
   a {
     &::before {
-      content: url("../images/drop-arrow-blue.svg");
-      transform: translateY(-50%) rotate(180deg);
+      content: url("../images/drop-arrow-blue.svg") !important;
+      transform: translateY(-50%) rotate(180deg) !important;
     }
   }
 }
