@@ -89,6 +89,14 @@
     }
   }
 
+  &__contact {
+    width: 100%;
+  }
+
+  .request__contact {
+    max-width: 100%;
+  }
+
   @include m($xl) {
     padding: 85px 0;
   }

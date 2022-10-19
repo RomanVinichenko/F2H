@@ -65,6 +65,11 @@
 
   &__contact {
     width: 100%;
+
+    .request__contact {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 
   @include m($xl) {
