@@ -63,6 +63,17 @@
 
     &:hover {
       border-bottom: 4px solid transparent;
+      color: #09268d;
+
+      &::before {
+        content: url("../images/drop-arrow-blue.svg");
+        transform: translateY(-50%) rotate(180deg);
+
+        @include m($lg) {
+          content: url("../images/drop-arrow.svg");
+          transform: translateY(-50%);
+        }
+      }
     }
 
     @include m($lg) {
@@ -76,20 +87,6 @@
     .sub-menu {
       visibility: visible;
       opacity: 1;
-    }
-
-    a {
-      color: #09268d;
-
-      &::before {
-        content: url("../images/drop-arrow-blue.svg");
-        transform: translateY(-50%) rotate(180deg);
-      }
-
-      @include m($lg) {
-        content: url("../images/drop-arrow.svg");
-        transform: translateY(-50%);
-      }
     }
   }
 
