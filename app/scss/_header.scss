@@ -66,6 +66,7 @@
     }
 
     @include m($lg) {
+      height: auto;
       border-bottom: none !important;
       background-color: #f0f5ff;
     }
@@ -83,6 +84,11 @@
       &::before {
         content: url("../images/drop-arrow-blue.svg");
         transform: translateY(-50%) rotate(180deg);
+      }
+
+      @include m($lg) {
+        content: url("../images/drop-arrow.svg");
+        transform: translateY(-50%);
       }
     }
   }
@@ -157,14 +163,9 @@
         @include m($lg) {
           padding: 24px 16px;
           width: 100%;
-          border-bottom: 1px solid #f0f5ff;
           font-weight: 500;
           font-size: 18px;
           line-height: 26px;
-
-          &:hover {
-            border-bottom: 1px solid #f0f5ff;
-          }
         }
       }
 
@@ -214,7 +215,7 @@
   height: auto;
   background-color: #fff;
   filter: drop-shadow(0 2px 24px rgba(10, 22, 84, 0.1));
-  transition: all 0.3s;
+  transition: all 0.3s !important;
 
   &::after {
     content: "";
