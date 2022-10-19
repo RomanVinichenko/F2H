@@ -589,6 +589,19 @@ h6 {
   margin: 0 auto;
   max-width: 588px;
 
+  .text-label-span {
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.04em;
+    color: #767e8b;
+    transition: all 0.3s;
+  }
+
   .career-input-block {
     display: grid;
     grid-gap: 32px 24px;
@@ -603,19 +616,6 @@ h6 {
       .text-label-span {
         top: 0;
       }
-    }
-
-    .text-label-span {
-      position: absolute;
-      left: 0;
-      top: 28px;
-      width: 100%;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 20px;
-      letter-spacing: -0.04em;
-      color: #767e8b;
-      transition: all 0.3s;
     }
 
     .wpcf7-form-control-wrap {
@@ -634,10 +634,12 @@ h6 {
       margin: 0;
       padding: 0;
       width: 100%;
-      height: 64px;
+      height: 64px !important;
       max-height: 64px !important;
+      overflow: hidden;
       border-top: none;
       border-right: none;
+      border-bottom: none;
       border-left: none;
       background-color: transparent;
     }
@@ -955,4 +957,15 @@ h6 {
     border-bottom: none !important;
     color: #011d47 !important;
   }
+}
+
+.wpcf7-not-valid-tip {
+  position: absolute;
+  top: 73px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  color: #ff535e;
 }

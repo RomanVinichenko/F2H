@@ -9,6 +9,8 @@
 
 .menu-arrow-rotate {
   a {
+    color: #09268d;
+
     &::before {
       content: url("../images/drop-arrow-blue.svg") !important;
       transform: translateY(-50%) rotate(180deg) !important;
@@ -276,6 +278,7 @@
 
     @include m($lg) {
       margin-bottom: 24px;
+      margin-left: 16px;
     }
   }
 
@@ -300,7 +303,8 @@
     }
 
     @include m($lg) {
-      padding: 0 0 0 16px !important;
+      padding: 0 !important;
+      width: fit-content;
       border-bottom: none !important;
     }
   }
