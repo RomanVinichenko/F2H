@@ -99,6 +99,7 @@
     }
 
     @include m($lg) {
+      width: 100%;
       height: auto;
       border-bottom: none !important;
       background-color: #f0f5ff;
@@ -234,7 +235,7 @@
   opacity: 0;
   padding: 24px;
   width: fit-content;
-  height: 100%;
+  height: fit-content;
   overflow: hidden;
   background-color: #fff;
   filter: drop-shadow(0 2px 24px rgba(10, 22, 84, 0.1));
