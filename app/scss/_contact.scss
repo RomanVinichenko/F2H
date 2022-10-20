@@ -75,14 +75,10 @@
       color: #767e8b;
     }
 
-    @include m($lg) {
+    @include m($md) {
       margin-right: 0;
       margin-bottom: 30px;
       max-width: 100%;
-    }
-
-    @include m($md) {
-      margin-right: 0;
     }
   }
 

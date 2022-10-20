@@ -5,6 +5,17 @@
   top: 0;
   z-index: 30;
   background-color: #fff;
+
+  .current_page_item {
+    a {
+      border-bottom: 4px solid #09268d !important;
+      color: #09268d !important;
+
+      @include m($lg) {
+        border-bottom: none !important;
+      }
+    }
+  }
 }
 
 .menu-arrow-rotate {
@@ -47,17 +58,6 @@
       @include m($lg) {
         border-top: 1px solid #f0f5ff;
       }
-    }
-  }
-}
-
-.current_page_item {
-  a {
-    border-bottom: 4px solid #09268d !important;
-    color: #09268d !important;
-
-    @include m($lg) {
-      border-bottom: none !important;
     }
   }
 }

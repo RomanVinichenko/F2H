@@ -1039,6 +1039,10 @@ h6 {
   text-transform: uppercase;
   color: #011d47;
   transform: translateY(-50%);
+
+  @include m($md) {
+    left: 200px;
+  }
 }
 
 .wpcf7-select {
@@ -1061,11 +1065,6 @@ h6 {
   .request__contact {
     .career-input-block {
       margin-bottom: 32px;
-
-      @include m($sm) {
-        grid-gap: 24px 0;
-        grid-template-columns: 1fr;
-      }
     }
   }
 }
