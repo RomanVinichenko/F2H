@@ -89,13 +89,6 @@
 
     &:hover {
       border-bottom: 4px solid transparent;
-
-      &::before {
-        @include m($lg) {
-          content: url("../images/drop-arrow-blue.svg");
-          transform: translateY(-50%) rotate(180deg);
-        }
-      }
     }
 
     @include m($lg) {
@@ -120,8 +113,8 @@
         transform: translateY(-50%) rotate(180deg);
 
         @include m($lg) {
-          content: url("../images/drop-arrow.svg");
-          transform: translateY(-50%);
+          content: url("../images/drop-arrow-blue.svg");
+          transform: translateY(-50%) rotate(180deg);
         }
       }
     }
@@ -235,8 +228,7 @@
   opacity: 0;
   padding: 24px;
   width: fit-content;
-  height: fit-content;
-  overflow: hidden;
+  height: fit-content !important;
   background-color: #fff;
   filter: drop-shadow(0 2px 24px rgba(10, 22, 84, 0.1));
   transition: all 0.3s !important;
@@ -325,6 +317,7 @@
     opacity: 1;
     padding: 0 !important;
     width: 100%;
+    overflow: hidden;
     box-shadow: none;
     background-color: #f0f5ff;
     filter: none;
