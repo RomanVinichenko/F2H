@@ -2,6 +2,14 @@
   margin-top: auto;
   background-color: #f0f5ff;
 
+  .current_page_item {
+    border: none !important;
+
+    &:hover {
+      border: none !important;
+    }
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;

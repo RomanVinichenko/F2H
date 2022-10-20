@@ -330,7 +330,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include m($md) {
+    @include m(860) {
       flex-direction: column;
     }
   }
@@ -357,12 +357,25 @@
     }
 
     @include m($lg) {
-      max-width: 50%;
+      max-width: 45%;
     }
 
-    @include m($md) {
+    @include m(860) {
       margin-right: 0;
       margin-bottom: 28px;
+      max-width: 100%;
+    }
+  }
+
+  .request__contact {
+    .career-input-block {
+      @include m($sm) {
+        grid-gap: 24px 0;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @include m(860) {
       max-width: 100%;
     }
   }
