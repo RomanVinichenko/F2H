@@ -1074,6 +1074,18 @@ h6 {
   }
 }
 
+.rates {
+  ul:last-of-type {
+    li:first-of-type {
+      justify-content: flex-end !important;
+
+      p {
+        margin-left: 8% !important;
+      }
+    }
+  }
+}
+
 // Denys styles
 
 #menu-footer-menu {
