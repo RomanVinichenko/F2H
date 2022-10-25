@@ -314,15 +314,6 @@
     }
   }
 
-  .request__contact {
-    .career-input-block {
-      @include m($sm) {
-        grid-gap: 24px 0;
-        grid-template-columns: 1fr;
-      }
-    }
-  }
-
   @include m($xl) {
     padding: 85px 0;
   }

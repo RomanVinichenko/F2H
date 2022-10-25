@@ -15,6 +15,11 @@ body {
   color: #011d47;
   background-color: #fff;
   cursor: default;
+
+  @include m($md) {
+    font-size: 17px;
+    line-height: 24px;
+  }
 }
 
 .main {
@@ -46,8 +51,8 @@ h6 {
 }
 
 h2 {
-  font-size: 56px;
-  line-height: 64px;
+  font-size: 54px;
+  line-height: 62px;
 
   @include m($xl) {
     font-size: 42px;
@@ -61,12 +66,12 @@ h2 {
 }
 
 h3 {
-  font-size: 40px;
-  line-height: 52px;
+  font-size: 38px;
+  line-height: 48px;
 
   @include m($xl) {
-    font-size: 38px;
-    line-height: 50px;
+    font-size: 34px;
+    line-height: 42px;
   }
 
   @include m($lg) {
@@ -92,8 +97,8 @@ h5 {
 }
 
 h6 {
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 28px;
   letter-spacing: -0.04em;
 
   @include m($lg) {
@@ -795,8 +800,8 @@ h6 {
 .strategy_under_img_1,
 .strategy_under_img_2 {
   font-weight: 600;
-  font-size: 56px;
-  line-height: 64px;
+  font-size: 50px;
+  line-height: 58px;
   letter-spacing: -0.06em;
 
   @include m($xl) {
@@ -1039,6 +1044,10 @@ h6 {
   text-transform: uppercase;
   color: #011d47;
   transform: translateY(-50%);
+
+  @include m($md) {
+    left: 200px;
+  }
 }
 
 .wpcf7-select {
@@ -1061,10 +1070,17 @@ h6 {
   .request__contact {
     .career-input-block {
       margin-bottom: 32px;
+    }
+  }
+}
 
-      @include m($sm) {
-        grid-gap: 24px 0;
-        grid-template-columns: 1fr;
+.rates {
+  ul:last-of-type {
+    li:first-of-type {
+      justify-content: flex-end !important;
+
+      p {
+        margin-left: 8% !important;
       }
     }
   }

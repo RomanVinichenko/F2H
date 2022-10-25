@@ -13,46 +13,32 @@
 <body>
 <header class="header">
   <div class="container">
-    <nav class="menu">
+    <nav class="rv-menu">
       <a class="logo" href="index.html">
         <img src="images/logo.svg" alt="Logo">
       </a>
-      <ul class="menu__list">
-        <li>
+      <ul class="rv-menu__list">
+        <li class="menu-item-type-post_type">
           <a href="#">LOAN PRODUCTS</a>
         </li>
-        <li>
+        <li class="menu-item-type-post_type">
           <a href="#">INVESTORS</a>
         </li>
-        <li class="menu__active">
+        <li class="menu-item-type-custom">
           <a href="#">RESOURCES</a>
-          <div class="menu__drop">
-            <a href="#">Blog</a>
-            <a href="#">FAQ</a>
-          </div>
+          <ul class="sub-menu">
+            <li>
+              <a href="#">Blog</a>
+            </li>
+            <li>
+              <a href="#">FAQ</a>
+            </li>
+          </ul>
         </li>
-        <li class="menu__active-mobile">
-          <div class="panel-group" id="accordion1">
-            <div class="panel">
-              <div class="panel-title">
-                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapse-mobile">
-                  RESOURCES
-                </a>
-              </div>
-              <div id="collapse-mobile" class="panel-collapse collapse">
-                <div class="panel-body">
-                  <a href="#">Blog</a>
-                  <a href="#">FAQ</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </li>
-        <li>
+        <li class="menu-item-type-post_type">
           <a href="#">CAREER</a>
         </li>
-        <li>
+        <li class="menu-item-type-post_type">
           <a href="contact.html">Contact</a>
         </li>
       </ul>
@@ -69,6 +55,7 @@
     </nav>
   </div>
 </header>
+
 <main class="main">
   <section class="terms blog-item">
     <div class="container">
