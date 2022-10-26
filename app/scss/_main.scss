@@ -60,7 +60,13 @@
 
     h2 {
       margin-bottom: 40px;
-      font-size: 44px;
+      font-size: 40px;
+      line-height: 50px;
+
+      @include m($lg) {
+        font-size: 36px;
+        line-height: 48px;
+      }
 
       @include h(982) {
         margin-bottom: 20px;
@@ -68,8 +74,6 @@
 
       @include h(830) {
         margin-bottom: 15px;
-        font-size: 42px;
-        line-height: 50px;
       }
 
       @include h(752) {
@@ -77,15 +81,6 @@
         line-height: 30px !important;
       }
 
-      @include m($xl) {
-        font-size: 42px;
-        line-height: 50px;
-      }
-
-      @include m($lg) {
-        font-size: 36px;
-        line-height: 48px;
-      }
 
       @include m(680) {
         margin-bottom: 24px;
@@ -288,7 +283,7 @@
 
     ul {
       display: grid;
-      grid-gap: 24px 60px;
+      grid-gap: 18px 60px;
       grid-template-columns: 1fr 1fr;
       margin: 0 auto;
 
@@ -296,7 +291,7 @@
         a {
           position: relative;
           display: block;
-          padding: 0 0 10px 25px;
+          padding: 0 0 6px 25px;
           width: fit-content;
           height: 100%;
           border-bottom: 1px solid transparent;
