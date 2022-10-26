@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   letter-spacing: -0.04em;
   color: #011d47;
@@ -51,8 +51,8 @@ h6 {
 }
 
 h2 {
-  font-size: 54px;
-  line-height: 62px;
+  font-size: 48px;
+  line-height: 56px;
 
   @include m($xl) {
     font-size: 42px;
@@ -66,43 +66,43 @@ h2 {
 }
 
 h3 {
-  font-size: 38px;
-  line-height: 48px;
+  font-size: 34px;
+  line-height: 46px;
 
   @include m($xl) {
-    font-size: 34px;
-    line-height: 42px;
+    font-size: 32px;
+    line-height: 40px;
   }
 
   @include m($lg) {
     font-size: 30px;
-    line-height: 40px;
+    line-height: 38px;
   }
 }
 
 h5 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 26px;
+  line-height: 34px;
   letter-spacing: -0.04em;
 
   @include m($xl) {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 26px;
+    line-height: 34px;
   }
 
   @include m($lg) {
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
 h6 {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 28px;
   letter-spacing: -0.04em;
 
   @include m($lg) {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 30px;
   }
 }
@@ -800,8 +800,8 @@ h6 {
 .strategy_under_img_1,
 .strategy_under_img_2 {
   font-weight: 600;
-  font-size: 50px;
-  line-height: 58px;
+  font-size: 46px;
+  line-height: 56px;
   letter-spacing: -0.06em;
 
   @include m($xl) {
