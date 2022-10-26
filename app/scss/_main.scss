@@ -60,6 +60,7 @@
 
     h2 {
       margin-bottom: 40px;
+      font-size: 44px;
 
       @include h(982) {
         margin-bottom: 20px;
@@ -108,7 +109,7 @@
 
 .rates {
   margin-bottom: 40px;
-  padding: 22px;
+  padding: 20px;
   max-width: 484px;
   background-color: #011d47;
 
@@ -127,10 +128,11 @@
     li {
       display: flex;
       justify-content: space-between;
-      padding-top: 11px;
+      padding-top: 8px;
+      font-size: 16px;
 
       &:not(:last-child) {
-        padding-bottom: 11px;
+        padding-bottom: 8px;
         border-bottom: 1px solid rgba(#767e8b, 0.8);
 
         @include h(917) {
@@ -228,7 +230,7 @@
     p {
       margin: 0 !important;
       font-weight: 600;
-      font-size: 18px !important;
+      font-size: 20px !important;
       line-height: 26px !important;
       letter-spacing: -0.04em;
       color: #09268d;
