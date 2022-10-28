@@ -87,11 +87,6 @@
       margin-bottom: 32px;
       color: #394b65;
 
-      @include m($xl) {
-        font-size: 18px;
-        line-height: 26px;
-      }
-
       @include m($lg) {
         margin-bottom: 24px;
       }

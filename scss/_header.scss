@@ -257,7 +257,7 @@
       margin-bottom: 16px;
 
       @include m($lg) {
-        margin-bottom: 24px;
+        margin-bottom: 10px;
       }
     }
 
@@ -280,7 +280,7 @@
     }
 
     @include m($lg) {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       margin-left: 16px;
     }
   }
