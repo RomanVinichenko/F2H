@@ -198,11 +198,11 @@
   display: none;
 
   .accordion-toggle {
-    padding: 30px 16px 16px;
+    padding: 20px 16px 16px;
     width: 100%;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 26px;
     letter-spacing: -0.04em;
     color: #011d47;
     background-color: #fff;
@@ -210,7 +210,7 @@
   }
 
   .collapsed {
-    padding: 30px 16px;
+    padding: 20px 16px;
     background-color: transparent;
     transition: background-color 1s, padding 0.3s;
   }
@@ -228,7 +228,7 @@
   }
 
   .panel-body {
-    padding: 0 16px 30px;
+    padding: 0 16px 8px;
     background-color: #fff;
 
     p {
