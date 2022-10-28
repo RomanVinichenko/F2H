@@ -30,8 +30,8 @@
     }
 
     @include m($xl) {
-      font-size: 18px;
-      line-height: 26px;
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 
@@ -243,6 +243,11 @@
       line-height: 28px;
       letter-spacing: -0.04em;
       color: #394b65;
+
+      @include m($md) {
+        font-size: 18px;
+        line-height: 26px;
+      }
     }
   }
 

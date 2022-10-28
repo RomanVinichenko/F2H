@@ -136,18 +136,7 @@
         font-size: 12px;
         line-height: 20px;
 
-        @include h(830) {
-          font-size: 14px;
-        }
-
-        @include m(680) {
-          font-size: 16px;
-        }
-
         @include m($sm) {
-          font-weight: 600;
-          font-size: 12px;
-          line-height: 24px;
           letter-spacing: -0.04em;
           text-align: right;
           text-transform: uppercase;
@@ -254,8 +243,6 @@
 
       @include m($xl) {
         margin-right: 40px;
-        font-size: 18px;
-        line-height: 26px;
       }
 
       @include m($lg) {
@@ -266,9 +253,10 @@
 
     ul {
       display: grid;
-      grid-gap: 18px 60px;
+      grid-gap: 14px 60px;
       grid-template-columns: 1fr 1fr;
       margin: 0 auto;
+      height: fit-content;
 
       li {
         height: 26px;
@@ -420,11 +408,6 @@
           margin-bottom: 26px;
         }
       }
-
-      @include m($xl) {
-        font-size: 18px;
-        line-height: 26px;
-      }
     }
   }
 
@@ -469,11 +452,6 @@
       @include m($xl) {
         margin-bottom: 26px;
       }
-    }
-
-    @include m($xl) {
-      font-size: 18px;
-      line-height: 26px;
     }
   }
 

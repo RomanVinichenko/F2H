@@ -10,11 +10,6 @@
         margin-bottom: 26px;
       }
     }
-
-    @include m($xl) {
-      font-size: 18px;
-      line-height: 26px;
-    }
   }
 
   @include m($xl) {
@@ -43,7 +38,7 @@
   .nav-tabs {
     li {
       a {
-        padding: 30px 48px;
+        padding: 22px 34px;
       }
     }
   }
