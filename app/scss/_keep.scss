@@ -264,3 +264,25 @@
     display: block;
   }
 }
+
+.loan-mobile {
+  .accordion-toggle {
+    background-color: #f0f5ff;
+    transition: background-color 0.1s, padding 0.3s;
+  }
+
+  .collapsed {
+    background-color: transparent;
+    transition: background-color 1s, padding 0.3s;
+  }
+
+  .panel-body {
+    background-color: #f0f5ff;
+  }
+
+  .in {
+    .panel-body {
+      background-color: #f0f5ff;
+    }
+  }
+}
