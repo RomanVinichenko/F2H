@@ -28,11 +28,6 @@
         margin-bottom: 26px;
       }
     }
-
-    @include m($xl) {
-      font-size: 16px;
-      line-height: 24px;
-    }
   }
 
   @include m($xl) {
